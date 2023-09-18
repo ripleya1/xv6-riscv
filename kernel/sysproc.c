@@ -68,6 +68,17 @@ sys_sleep(void)
   return 0;
 }
 
+// might want to implement this in proc.c or sysfile.c
+uint64
+sys_getfilenum(void)
+{
+  int pid;
+
+  argint(0, &pid);
+  return kill(pid);
+}
+
+
 uint64
 sys_kill(void)
 {
