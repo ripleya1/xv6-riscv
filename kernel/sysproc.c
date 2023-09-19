@@ -5,7 +5,8 @@
 #include "memlayout.h"
 #include "spinlock.h"
 #include "proc.h"
-#include "file.h"
+// #include "file.h"
+// #include "fs.h"
 
 uint64
 sys_exit(void)
@@ -69,14 +70,15 @@ sys_sleep(void)
   return 0;
 }
 
-// might want to implement this in proc.c or sysfile.c
+// might want to implement this in proc.c
 uint64
 sys_getfilenum(void)
 {
   int pid;
 
   argint(0, &pid);
-  return kill(pid);
+  // return getfilenum(pid);
+  // return kill(pid);
 
   struct proc *p;
   struct proc proc[NPROC];
@@ -84,20 +86,19 @@ sys_getfilenum(void)
   c = 0;
 
   for(p = proc; p < &proc[NPROC]; p++){
-    acquire(&p->lock); // might not need to lock
+    // acquire(&p->lock); // might not need to lock
     if(p->pid == pid){
-      struct file *file[NOFILE];
+      // struct file *file[NOFILE];
       struct file *f;
       // check if every file in the proc is off
-      for(int i = 0; i < NOFILE; i++){ // is this allowed?? i think it is bc they did it in kill
-        f = file[i];
-        if(&f->off == 0){ // this is probably the wrong thing to be checking
+      for(int i = 0; i < NOFILE; i++){
+        f = p->ofile[i];
+        if(f == 0){ // this is probably the wrong thing to be checking
           c++;
         }
       }
     }
   }
-  argint(0, &pid);
   return c;
 }
 
