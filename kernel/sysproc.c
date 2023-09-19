@@ -89,7 +89,8 @@ sys_getfilenum(void)
       struct file *file[NOFILE];
       struct file *f;
       // check if every file in the proc is off
-      for(f = file; f < &file[NOFILE]; f++){ // is this allowed?? i think it is bc they did it in kill
+      for(int i = 0; i < NOFILE; i++){ // is this allowed?? i think it is bc they did it in kill
+        f = file[i];
         if(&f->off == 0){ // this is probably the wrong thing to be checking
           c++;
         }
