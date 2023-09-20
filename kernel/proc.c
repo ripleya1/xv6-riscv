@@ -609,13 +609,10 @@ getfilenum(int pid)
   if(pid == 0){
     return -1;
   }
-  // pid = 1;
   struct proc *p;
-  // struct proc proc[NPROC];
-  // int c;
-  // c = 0;
 
   for(p = proc; p < &proc[NPROC]; p++){
+    // find the proc
     if(p->pid == pid){
       struct file *f;
       int i;
@@ -625,15 +622,13 @@ getfilenum(int pid)
         if(f == 0){
           return i;
         }
-        
       }
+      // all files are open case
       return i;
     }
   }
+  // proc never gets found case
   return -1;
-  // printf("%d", c);
-  // return c;
-  // return pid;
 }
 
 void
