@@ -76,31 +76,8 @@ sys_getfilenum(void)
 {
   int pid;
 
-  // argint(0, &pid);
-  // if(pid == 0){
-  //   return -1;
-  // }
-  pid = 1;
-  struct proc *p;
-  struct proc proc[NPROC];
-  int c;
-  c = 0;
-
-  for(p = proc; p < &proc[NPROC]; p++){
-    if(p->pid == pid){
-      struct file *f;
-      // check if every file in the proc is open
-      for(int i = 0; i < NOFILE; i++){
-        f = p->ofile[i];
-        if(f == 0){
-          c++;
-        }
-      }
-    }
-  }
-  printf("%d", c);
-  return c;
-  // return pid;
+  argint(0, &pid);
+  return getfilenum(pid);
 }
 
 

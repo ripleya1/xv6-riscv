@@ -603,6 +603,39 @@ kill(int pid)
   return -1;
 }
 
+int
+getfilenum(int pid)
+{
+  if(pid == 0){
+    return -1;
+  }
+  // pid = 1;
+  struct proc *p;
+  // struct proc proc[NPROC];
+  // int c;
+  // c = 0;
+
+  for(p = proc; p < &proc[NPROC]; p++){
+    if(p->pid == pid){
+      struct file *f;
+      int i;
+      // check if every file in the proc is open
+      for(i = 0; i < NOFILE; i++){
+        f = p->ofile[i];
+        if(f == 0){
+          return i;
+        }
+        
+      }
+      return i;
+    }
+  }
+  return -1;
+  // printf("%d", c);
+  // return c;
+  // return pid;
+}
+
 void
 setkilled(struct proc *p)
 {
