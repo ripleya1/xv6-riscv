@@ -86,19 +86,18 @@ sys_getfilenum(void)
   c = 0;
 
   for(p = proc; p < &proc[NPROC]; p++){
-    // acquire(&p->lock); // might not need to lock
     if(p->pid == pid){
-      // struct file *file[NOFILE];
       struct file *f;
-      // check if every file in the proc is off
+      // check if every file in the proc is open
       for(int i = 0; i < NOFILE; i++){
         f = p->ofile[i];
-        if(f == 0){ // this is probably the wrong thing to be checking
+        if(f == 0){
           c++;
         }
       }
     }
   }
+  printf("%d", c);
   return c;
 }
 
