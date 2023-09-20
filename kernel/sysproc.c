@@ -76,10 +76,11 @@ sys_getfilenum(void)
 {
   int pid;
 
-  argint(0, &pid);
-  // return getfilenum(pid);
-  // return kill(pid);
-
+  // argint(0, &pid);
+  // if(pid == 0){
+  //   return -1;
+  // }
+  pid = 1;
   struct proc *p;
   struct proc proc[NPROC];
   int c;
@@ -99,6 +100,7 @@ sys_getfilenum(void)
   }
   printf("%d", c);
   return c;
+  // return pid;
 }
 
 
