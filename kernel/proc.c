@@ -631,6 +631,17 @@ getfilenum(int pid)
   return -1;
 }
 
+int
+settickets(int number)
+{
+  struct proc *p = myproc();
+  if(number > 0){
+    p->tickets = number;
+    return 0;
+  }
+  return -1;
+}
+
 void
 setkilled(struct proc *p)
 {

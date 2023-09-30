@@ -70,7 +70,6 @@ sys_sleep(void)
   return 0;
 }
 
-// might want to implement this in proc.c
 uint64
 sys_getfilenum(void)
 {
@@ -78,6 +77,15 @@ sys_getfilenum(void)
 
   argint(0, &pid);
   return getfilenum(pid);
+}
+
+uint64
+sys_settickets(void)
+{
+  int number;
+
+  argint(0, &number);
+  return settickets(number);
 }
 
 
