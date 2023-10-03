@@ -635,6 +635,7 @@ getfilenum(int pid)
   return -1;
 }
 
+// TODO: do this in fork
 int
 settickets(int number)
 {
@@ -646,8 +647,8 @@ settickets(int number)
   return -1;
 }
 
-// TODO: should this be the thing that's aggregating the data?
-// TODO: should probably make a user/getpinfo.c file for printing
+// TODO: should this be the thing that's aggregating the data? separate function in proc
+// TODO: should probably make a user/getpinfo.c file for printing? 3 programs forked that collect stats, run counter for awhile, print (could print as you go or store in arr)
 int
 getpinfo(struct pstat* ps)
 {
@@ -657,7 +658,6 @@ getpinfo(struct pstat* ps)
   struct proc *p;
   int c;
   c = 0;
-  // &ps->pid[0];
   // iterate through all processes and 
   for(p = proc; p < &proc[NPROC]; p++){
     if(p->state == USED){ // TODO: also check for sleeping, runnable, running?
@@ -668,11 +668,16 @@ getpinfo(struct pstat* ps)
     }
     ps->tickets[c] = p->tickets;
     ps->pid[c] = p->pid;
-    // &ps->ticks[i] = p-> ; // TODO: not sure where to find/calculate this
+    // &ps->ticks[i] = p-> ; // TODO: not sure where to find/calculate this? use sys_uptime every time you context switch
     c++;
   }
 
   return 0;
+}
+
+void
+aggregatepstat(struct pstat* ps){
+
 }
 
 void
