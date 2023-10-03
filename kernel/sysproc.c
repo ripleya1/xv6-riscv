@@ -5,8 +5,7 @@
 #include "memlayout.h"
 #include "spinlock.h"
 #include "proc.h"
-// #include "file.h"
-// #include "fs.h"
+#include "pstat.h"
 
 uint64
 sys_exit(void)
@@ -86,6 +85,14 @@ sys_settickets(void)
 
   argint(0, &number);
   return settickets(number);
+}
+
+uint64
+sys_getpinfo(void)
+{
+  struct pstat* emptyPstat;
+  emptyPstat = malloc(sizeof(struct pstat*)); // TODO: figure out how to include otherwise remove this
+  return getpinfo(emptyPstat); // TODO: always going to return -1 for now
 }
 
 

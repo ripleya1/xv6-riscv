@@ -24,6 +24,7 @@ int sleep(int);
 int uptime(void);
 int getfilenum(int);
 int settickets(int);
+int getpinfo(struct pstat*);
 
 // ulib.c
 int stat(const char*, struct stat*);

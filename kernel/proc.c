@@ -5,6 +5,7 @@
 #include "spinlock.h"
 #include "proc.h"
 #include "defs.h"
+#include "pstat.h"
 
 struct cpu cpus[NCPU];
 
@@ -145,6 +146,9 @@ found:
   memset(&p->context, 0, sizeof(p->context));
   p->context.ra = (uint64)forkret;
   p->context.sp = p->kstack + PGSIZE;
+
+  // Set number of tickets to default (1)
+  p->tickets = 1;
 
   return p;
 }
@@ -640,6 +644,35 @@ settickets(int number)
     return 0;
   }
   return -1;
+}
+
+// TODO: should this be the thing that's aggregating the data?
+// TODO: should probably make a user/getpinfo.c file for printing
+int
+getpinfo(struct pstat* ps)
+{
+  // if(ps == NULL){ // TODO: doesn't know what null is??
+  //   return -1;
+  // }
+  struct proc *p;
+  int c;
+  c = 0;
+  // &ps->pid[0];
+  // iterate through all processes and 
+  for(p = proc; p < &proc[NPROC]; p++){
+    if(p->state == USED){ // TODO: also check for sleeping, runnable, running?
+      ps->inuse[c] = 1;
+    }
+    else{
+      ps->inuse[c] = 0;
+    }
+    ps->tickets[c] = p->tickets;
+    ps->pid[c] = p->pid;
+    // &ps->ticks[i] = p-> ; // TODO: not sure where to find/calculate this
+    c++;
+  }
+
+  return 0;
 }
 
 void
