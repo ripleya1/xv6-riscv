@@ -299,6 +299,7 @@ fork(void)
     return -1;
   }
   np->sz = p->sz;
+  np->tickets = p->tickets; // TODO: should be using settickets here?
 
   // copy saved user registers.
   *(np->trapframe) = *(p->trapframe);
@@ -635,7 +636,6 @@ getfilenum(int pid)
   return -1;
 }
 
-// TODO: do this in fork
 int
 settickets(int number)
 {
@@ -652,13 +652,18 @@ settickets(int number)
 int
 getpinfo(struct pstat* ps)
 {
-  // if(ps == NULL){ // TODO: doesn't know what null is??
-  //   return -1;
-  // }
+  if(ps == NULL){ // TODO: doesn't know what null is??
+    return -1;
+  }
+
+  return 0;
+}
+
+void
+aggregatepstat(struct pstat* ps){
   struct proc *p;
   int c;
   c = 0;
-  // iterate through all processes and 
   for(p = proc; p < &proc[NPROC]; p++){
     if(p->state == USED){ // TODO: also check for sleeping, runnable, running?
       ps->inuse[c] = 1;
@@ -668,16 +673,9 @@ getpinfo(struct pstat* ps)
     }
     ps->tickets[c] = p->tickets;
     ps->pid[c] = p->pid;
-    // &ps->ticks[i] = p-> ; // TODO: not sure where to find/calculate this? use sys_uptime every time you context switch
+    ps->ticks[c] = p->ticks; // TODO: use sys_uptime every time you context switch in scheduler
     c++;
   }
-
-  return 0;
-}
-
-void
-aggregatepstat(struct pstat* ps){
-
 }
 
 void

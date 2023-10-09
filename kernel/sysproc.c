@@ -90,9 +90,9 @@ sys_settickets(void)
 uint64
 sys_getpinfo(void)
 {
-  struct pstat* emptyPstat;
-  emptyPstat = malloc(sizeof(struct pstat*)); // TODO: figure out how to include otherwise remove this
-  return getpinfo(emptyPstat); // TODO: always going to return -1 for now
+  uint64 p;
+  argaddr(1, &p);
+  return getpinfo(p);
 }
 
 
