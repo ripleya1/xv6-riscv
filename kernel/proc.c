@@ -6,6 +6,7 @@
 #include "proc.h"
 #include "defs.h"
 #include "pstat.h"
+#include <stddef.h>
 
 struct cpu cpus[NCPU];
 
@@ -656,26 +657,15 @@ getpinfo(struct pstat* ps)
     return -1;
   }
 
-  return 0;
-}
-
-void
-aggregatepstat(struct pstat* ps){
-  struct proc *p;
-  int c;
-  c = 0;
-  for(p = proc; p < &proc[NPROC]; p++){
-    if(p->state == USED){ // TODO: also check for sleeping, runnable, running?
-      ps->inuse[c] = 1;
-    }
-    else{
-      ps->inuse[c] = 0;
-    }
-    ps->tickets[c] = p->tickets;
-    ps->pid[c] = p->pid;
-    ps->ticks[c] = p->ticks; // TODO: use sys_uptime every time you context switch in scheduler
-    c++;
-  }
+  struct pstat pinfo; // local to kernel
+  for(int i; i < NPROC; i++){
+    pinfo.inuse[i] = (proc[i].state != UNUSED);
+    pinfo.tickets[i] = proc[i].tickets;
+    pinfo.pid[i] = proc[i].pid;
+    pinfo.ticks[i] = proc[i].ticks; // TODO: use sys_uptime every time you context switch in scheduler
+   }
+ // copy to user space, returns 0 if successful, -1 if not
+  return either_copyout(1, (uint64) ps, &pinfo, sizeof(struct pstat));
 }
 
 void

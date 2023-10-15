@@ -90,8 +90,8 @@ sys_settickets(void)
 uint64
 sys_getpinfo(void)
 {
-  uint64 p;
-  argaddr(1, &p);
+  struct pstat *p; 
+  argaddr(0, (uint64) p); 
   return getpinfo(p);
 }
 
