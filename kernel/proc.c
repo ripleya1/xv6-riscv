@@ -658,7 +658,8 @@ getpinfo(struct pstat* ps)
   }
 
   struct pstat pinfo; // local to kernel
-  for(int i; i < NPROC; i++){
+  int i;
+  for(i = 0; i < NPROC; i++){
     pinfo.inuse[i] = (proc[i].state != UNUSED);
     pinfo.tickets[i] = proc[i].tickets;
     pinfo.pid[i] = proc[i].pid;

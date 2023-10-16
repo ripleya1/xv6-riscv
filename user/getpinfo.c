@@ -8,7 +8,8 @@ main(struct pstat* ps)
 {
     fprintf(2, "PID         In use?         Tickets         Ticks"); // TODO: figure out how to align later
   // iterate over pstat struct
-  for(int i = 0; i < NPROC; i++){
+  int i;
+  for(i = 0; i < NPROC; i++){
     printf("%d          %d          %d          %d", 
         ps->pid[i],
         ps->inuse[i],

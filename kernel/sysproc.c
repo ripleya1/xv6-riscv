@@ -90,8 +90,16 @@ sys_settickets(void)
 uint64
 sys_getpinfo(void)
 {
-  struct pstat *p; 
-  argaddr(0, (uint64) p); 
+  struct pstat *p = (struct pstat *)kalloc(); 
+  // initialize pstat
+  int i;
+  for(i = 0; i < NPROC; i++){
+    p->inuse[i] = 0;
+    p->pid[i] = 0;
+    p->tickets[i] = 0;
+    p->ticks[i] = 0;
+  }
+  argaddr(0, (uint64 *) p); 
   return getpinfo(p);
 }
 
