@@ -4,18 +4,22 @@
 #include "kernel/pstat.h"
 
 int
-main(struct pstat* ps)
+main(int argc, char **argv)
 {
-    fprintf(2, "PID         In use?         Tickets         Ticks"); // TODO: figure out how to align later
+  struct pstat ps;
+  settickets(2); // test settickets
+  getpinfo(&ps);
   // iterate over pstat struct
   int i;
   for(i = 0; i < NPROC; i++){
-    printf("%d          %d          %d          %d", 
-        ps->pid[i],
-        ps->inuse[i],
-        ps->tickets[i],
-        ps->ticks[i]
-    );
+    if(ps.tickets[i] > 0){ // only print proc if it might be used ie has tickets
+      printf("PID: %d In use?: %d Tickets: %d Ticks: %d\n", 
+        ps.pid[i],
+        ps.inuse[i],
+        ps.tickets[i],
+        ps.ticks[i]
+      );
+    }
   }
   exit(0);
 }

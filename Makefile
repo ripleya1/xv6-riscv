@@ -123,10 +123,12 @@ UPROGS=\
 	$U/_init\
 	$U/_kill\
 	$U/_getfilenum\
+	$U/_getpinfo\
 	$U/_ln\
 	$U/_ls\
 	$U/_mkdir\
 	$U/_rm\
+	$U/_settickets\
 	$U/_sh\
 	$U/_stressfs\
 	$U/_usertests\
