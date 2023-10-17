@@ -450,6 +450,8 @@ wait(uint64 addr)
 void
 scheduler(void)
 {
+  // TODO: ch 9 code pg 4
+  // TODO: scaled_random in random.c for rng
   struct proc *p;
   struct cpu *c = mycpu();
   
@@ -466,13 +468,14 @@ scheduler(void)
         // before jumping back to us.
         p->state = RUNNING;
         c->proc = p;
+        // TODO: count tickets right before context switch
         swtch(&c->context, &p->context);
 
         // Process is done running for now.
         // It should have changed its p->state before coming back.
         c->proc = 0;
       }
-      release(&p->lock);
+      release(&p->lock); // TODO: make sure this happens right after cpu reset
     }
   }
 }
@@ -653,7 +656,7 @@ settickets(int number)
 int
 getpinfo(struct pstat* ps)
 {
-  if(ps == NULL){ // TODO: doesn't know what null is??
+  if(ps == NULL){
     return -1;
   }
 
