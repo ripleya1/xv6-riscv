@@ -301,7 +301,7 @@ fork(void)
     return -1;
   }
   np->sz = p->sz;
-  np->tickets = p->tickets;
+  // np->tickets = p->tickets;
 
   // copy saved user registers.
   *(np->trapframe) = *(p->trapframe);
@@ -326,6 +326,7 @@ fork(void)
   release(&wait_lock);
 
   acquire(&np->lock);
+  np->tickets = p->tickets; // TODO: should be here?
   np->state = RUNNABLE;
   release(&np->lock);
 
@@ -781,7 +782,10 @@ settickets(int number)
 {
   struct proc *p = myproc();
   if(number > 0){
+    // TODO: need lock?
+    acquire(&p->lock);
     p->tickets = number;
+    release(&p->lock);
     return 0;
   }
   return -1;
@@ -799,10 +803,13 @@ getpinfo(struct pstat* ps)
   struct pstat pinfo; // local to kernel
   int i;
   for(i = 0; i < NPROC; i++){
+    // TODO: need lock?
+    acquire(&proc[i].lock);
     pinfo.inuse[i] = (proc[i].state != UNUSED);
     pinfo.tickets[i] = proc[i].tickets;
     pinfo.pid[i] = proc[i].pid;
     pinfo.ticks[i] = proc[i].ticks; // TODO: use sys_uptime every time you context switch in scheduler
+    release(&proc[i].lock);
    }
  // copy to user space, returns 0 if successful, -1 if not
   return either_copyout(1, (uint64) ps, &pinfo, sizeof(struct pstat));
