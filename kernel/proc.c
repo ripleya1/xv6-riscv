@@ -301,7 +301,7 @@ fork(void)
     return -1;
   }
   np->sz = p->sz;
-  np->tickets = p->tickets; // TODO: should be using settickets here?
+  np->tickets = p->tickets;
 
   // copy saved user registers.
   *(np->trapframe) = *(p->trapframe);
@@ -577,20 +577,27 @@ scheduler(void)
   total = 4; // TODO: testing with this number
   // for(p = proc; p < &proc[NPROC]; p++) {
   //   // TODO: not sure if need lock here
-  //   // acquire(&p->lock);
+  //   acquire(&p->lock);
   //   total += p->tickets;
-  //   // release(&p->lock);
+  //   release(&p->lock);
+  //   // printf("e");
   // }
+
+  printf("%d\n", total);
 
   for(;;){
     // Avoid deadlock by ensuring that devices can interrupt.
     intr_on();
+    // printf("a");
     winner = scaled_random(0, total);
+    // winner = total;
     for(p = proc; p < &proc[NPROC]; p++) {
+      // printf("d");
       acquire(&p->lock);
       
       count = count + p->tickets;
       if(count > winner){ // winner found
+        // printf("c");
         if(p->state == RUNNABLE){
           p->ticks = p->ticks + 1; // count ticks
           
@@ -605,10 +612,13 @@ scheduler(void)
           // Process is done running for now.
           // It should have changed its p->state before coming back.
           c->proc = 0;
+          // printf("b");
         }
-        release(&p->lock); // lock should be released immediately after CPU reset
-        break;
+        // release(&p->lock); // lock should be released immediately after CPU reset
+        // break;
       }
+      release(&p->lock); // lock should be released immediately after CPU reset
+      break;
     }
   }
 }
