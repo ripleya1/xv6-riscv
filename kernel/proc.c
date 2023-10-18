@@ -575,22 +575,21 @@ scheduler(void)
   total = 0;
   rand_init(1); // TODO: need a better seed later
   total = 4; // TODO: testing with this number
+  // TODO: this always results in total being 1
   // for(p = proc; p < &proc[NPROC]; p++) {
-  //   // TODO: not sure if need lock here
   //   acquire(&p->lock);
   //   total += p->tickets;
   //   release(&p->lock);
-  //   // printf("e");
   // }
 
-  printf("%d\n", total);
+  // printf("%d\n", total);
 
   for(;;){
     // Avoid deadlock by ensuring that devices can interrupt.
     intr_on();
     // printf("a");
     winner = scaled_random(0, total);
-    // winner = total;
+    // printf("%d\n", winner);
     for(p = proc; p < &proc[NPROC]; p++) {
       // printf("d");
       acquire(&p->lock);
@@ -613,12 +612,15 @@ scheduler(void)
           // It should have changed its p->state before coming back.
           c->proc = 0;
           // printf("b");
+          // TODO: think my stuff breaking has something to do with this lock release
+          release(&p->lock); // lock should be released immediately after CPU reset
+          break;
         }
         // release(&p->lock); // lock should be released immediately after CPU reset
         // break;
       }
       release(&p->lock); // lock should be released immediately after CPU reset
-      break;
+      // break;
     }
   }
 }
