@@ -574,32 +574,42 @@ scheduler(void)
   winner = 0;
   total = 0;
   rand_init(1); // TODO: need a better seed later
+  total = 4; // TODO: testing with this number
+  // for(p = proc; p < &proc[NPROC]; p++) {
+  //   // TODO: not sure if need lock here
+  //   // acquire(&p->lock);
+  //   total += p->tickets;
+  //   // release(&p->lock);
+  // }
 
   for(;;){
     // Avoid deadlock by ensuring that devices can interrupt.
     intr_on();
-    total = 0; // TODO: set this somewhere
-    for(p = proc; p < &proc[NPROC]; p++) {
-      total += p->tickets;
-    }
     winner = scaled_random(0, total);
     for(p = proc; p < &proc[NPROC]; p++) {
       acquire(&p->lock);
       
       count = count + p->tickets;
       if(count > winner){ // winner found
+        if(p->state == RUNNABLE){
+          p->ticks = p->ticks + 1; // count ticks
+          
+          // Switch to chosen process.  It is the process's job
+          // to release its lock and then reacquire it
+          // before jumping back to us.
+          p->state = RUNNING;
+          c->proc = p;
+          
+          swtch(&c->context, &p->context); // schedule the winner
+          
+          // Process is done running for now.
+          // It should have changed its p->state before coming back.
+          c->proc = 0;
+        }
+        release(&p->lock); // lock should be released immediately after CPU reset
         break;
       }
     }
-    if(p->state == RUNNABLE){ // TODO: p carries over ?
-      // TODO: count ticks right before context switch
-      swtch(&c->context, &p->context); // schedule the winner
-      
-      // Process is done running for now.
-      // It should have changed its p->state before coming back.
-      c->proc = 0;
-    }
-    release(&p->lock); // TODO: make sure this happens right after cpu reset
   }
 }
 
