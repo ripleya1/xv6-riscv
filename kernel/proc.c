@@ -7,6 +7,7 @@
 #include "defs.h"
 #include "pstat.h"
 #include <stddef.h>
+#include "random.h"
 
 struct cpu cpus[NCPU];
 
@@ -447,11 +448,92 @@ wait(uint64 addr)
 //  - swtch to start running that process.
 //  - eventually that process transfers control
 //    via swtch back to the scheduler.
+
+/*
+SCHEDULER FROM BOOK
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <assert.h>
+
+// global ticket count
+int gtickets = 0;
+
+struct node_t {
+    int            tickets;
+    struct node_t *next;
+};
+
+struct node_t *head = NULL;
+
+void insert(int tickets) {
+    struct node_t *tmp = malloc(sizeof(struct node_t));
+    assert(tmp != NULL);
+    tmp->tickets = tickets;
+    tmp->next    = head;
+    head         = tmp;
+    gtickets    += tickets;
+}
+
+void print_list() {
+    struct node_t *curr = head;
+    printf("List: ");
+    while (curr) {
+	printf("[%d] ", curr->tickets);
+	curr = curr->next;
+    }
+    printf("\n");
+}
+
+int
+main(int argc, char *argv[])
+{
+    if (argc != 3) {
+	fprintf(stderr, "usage: lottery <seed> <loops>\n");
+	exit(1);
+    }
+    int seed  = atoi(argv[1]);
+    int loops = atoi(argv[2]);
+    srandom(seed);
+
+    // populate list with some number of jobs, each
+    // with some number of tickets
+    insert(50);
+    insert(100);
+    insert(25);
+
+    print_list();
+    
+    int i;
+    for (i = 0; i < loops; i++) {
+	int counter            = 0;
+	int winner             = random() % gtickets; // get winner
+  // alternatively getrandom(0, totaltickets);
+	struct node_t *current = head;
+
+	// loop until the sum of ticket values is > the winner
+	while (current) {
+	    counter = counter + current->tickets;
+	    if (counter > winner)
+		break; // found the winner
+	    current = current->next;
+	}
+	// current is the winner: schedule it...
+	print_list();
+	printf("winner: %d %d\n\n", winner, current->tickets);
+
+    }
+    return 0;
+}
+*/
+
+/*
+ORIGINAL SCHEDULER
+
 void
 scheduler(void)
 {
-  // TODO: ch 9 code pg 4
-  // TODO: scaled_random in random.c for rng
   struct proc *p;
   struct cpu *c = mycpu();
   
@@ -468,15 +550,56 @@ scheduler(void)
         // before jumping back to us.
         p->state = RUNNING;
         c->proc = p;
-        // TODO: count tickets right before context switch
         swtch(&c->context, &p->context);
 
         // Process is done running for now.
         // It should have changed its p->state before coming back.
         c->proc = 0;
       }
-      release(&p->lock); // TODO: make sure this happens right after cpu reset
+      release(&p->lock);
     }
+  }
+}
+*/
+
+void
+scheduler(void)
+{
+  struct proc *p;
+  struct cpu *c = mycpu();
+  int count, winner, total;
+  
+  c->proc = 0;
+  count = 0;
+  winner = 0;
+  total = 0;
+  rand_init(1); // TODO: need a better seed later
+
+  for(;;){
+    // Avoid deadlock by ensuring that devices can interrupt.
+    intr_on();
+    total = 0; // TODO: set this somewhere
+    for(p = proc; p < &proc[NPROC]; p++) {
+      total += p->tickets;
+    }
+    winner = scaled_random(0, total);
+    for(p = proc; p < &proc[NPROC]; p++) {
+      acquire(&p->lock);
+      
+      count = count + p->tickets;
+      if(count > winner){ // winner found
+        break;
+      }
+    }
+    if(p->state == RUNNABLE){ // TODO: p carries over ?
+      // TODO: count ticks right before context switch
+      swtch(&c->context, &p->context); // schedule the winner
+      
+      // Process is done running for now.
+      // It should have changed its p->state before coming back.
+      c->proc = 0;
+    }
+    release(&p->lock); // TODO: make sure this happens right after cpu reset
   }
 }
 
