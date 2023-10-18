@@ -587,16 +587,12 @@ scheduler(void)
   for(;;){
     // Avoid deadlock by ensuring that devices can interrupt.
     intr_on();
-    // printf("a");
     winner = scaled_random(0, total);
-    // printf("%d\n", winner);
     for(p = proc; p < &proc[NPROC]; p++) {
-      // printf("d");
       acquire(&p->lock);
       
       count = count + p->tickets;
       if(count > winner){ // winner found
-        // printf("c");
         if(p->state == RUNNABLE){
           p->ticks = p->ticks + 1; // count ticks
           
@@ -611,16 +607,11 @@ scheduler(void)
           // Process is done running for now.
           // It should have changed its p->state before coming back.
           c->proc = 0;
-          // printf("b");
-          // TODO: think my stuff breaking has something to do with this lock release
           release(&p->lock); // lock should be released immediately after CPU reset
           break;
         }
-        // release(&p->lock); // lock should be released immediately after CPU reset
-        // break;
       }
       release(&p->lock); // lock should be released immediately after CPU reset
-      // break;
     }
   }
 }
