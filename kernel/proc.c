@@ -326,7 +326,7 @@ fork(void)
   release(&wait_lock);
 
   acquire(&np->lock);
-  np->tickets = p->tickets; // TODO: should be here?
+  np->tickets = p->tickets; // TODO: should be in lock?
   np->state = RUNNABLE;
   release(&np->lock);
 
@@ -574,16 +574,15 @@ scheduler(void)
   count = 0;
   winner = 0;
   total = 0;
-  rand_init(1); // TODO: need a better seed later
-  total = 4; // TODO: testing with this number
+  rand_init(1);
+  // total = 5; // TODO: testing with this number
   // TODO: this always results in total being 1
-  // for(p = proc; p < &proc[NPROC]; p++) {
-  //   acquire(&p->lock);
-  //   total += p->tickets;
-  //   release(&p->lock);
-  // }
-
-  // printf("%d\n", total);
+  for(p = proc; p < &proc[NPROC]; p++) {
+    acquire(&p->lock);
+    total += p->tickets;
+    release(&p->lock);
+  }
+  printf("%d\n", total);
 
   for(;;){
     // Avoid deadlock by ensuring that devices can interrupt.
@@ -595,6 +594,7 @@ scheduler(void)
       count = count + p->tickets;
       if(count > winner){ // winner found
         if(p->state == RUNNABLE){
+          // TODO: want to do this with uptime or does it matter?
           p->ticks = p->ticks + 1; // count ticks
           
           // Switch to chosen process.  It is the process's job
@@ -808,7 +808,7 @@ getpinfo(struct pstat* ps)
     pinfo.inuse[i] = (proc[i].state != UNUSED);
     pinfo.tickets[i] = proc[i].tickets;
     pinfo.pid[i] = proc[i].pid;
-    pinfo.ticks[i] = proc[i].ticks; // TODO: use sys_uptime every time you context switch in scheduler
+    pinfo.ticks[i] = proc[i].ticks;
     release(&proc[i].lock);
    }
  // copy to user space, returns 0 if successful, -1 if not

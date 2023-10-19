@@ -14,7 +14,7 @@ main(int argc, char **argv)
   // problem 3: actually it's already screwy because with just one 
   // settickets the proc with 2 tickets consistently has less ticks
   settickets(2); // test settickets
-  fork();
+  // fork();
   // settickets(3);
   // fork();
   getpinfo(&ps);
