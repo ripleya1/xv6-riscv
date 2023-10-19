@@ -577,17 +577,18 @@ scheduler(void)
   rand_init(1);
   // total = 5; // TODO: testing with this number
   // TODO: this always results in total being 1
-  for(p = proc; p < &proc[NPROC]; p++) {
-    acquire(&p->lock);
-    total += p->tickets;
-    release(&p->lock);
-  }
-  printf("%d\n", total);
 
   for(;;){
     // Avoid deadlock by ensuring that devices can interrupt.
     intr_on();
+    total = 0;
+    for(p = proc; p < &proc[NPROC]; p++) {
+      acquire(&p->lock);
+      total += p->tickets;
+      release(&p->lock);
+    }
     winner = scaled_random(0, total);
+    // printf("%d\n", total);
     for(p = proc; p < &proc[NPROC]; p++) {
       acquire(&p->lock);
       
