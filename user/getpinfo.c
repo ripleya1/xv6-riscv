@@ -12,7 +12,7 @@ main(int argc, char **argv)
   struct pstat ps;
   int pid, i, k;
   // fork 6 times
-  for(k = 0; k < 6; k++){
+  for(k = 0; k < 3; k++){
     pid = fork();
     // parent case
     if(pid < 0){
@@ -28,24 +28,25 @@ main(int argc, char **argv)
       // do work
       for(i = 0; i < 1000000; i++){
         // print every so often
-        // if(i == (1000000 - 1)){
+        // if(i % 1000 == 0){
         //   wait(0);
         //   getpinfo(&ps);
         //   printStuff(ps);
         // }
       }
-      // wait(0);
-      // getpinfo(&ps);
-      // printStuff(ps);
+      // print result after every job finishes
+      wait(0);
+      getpinfo(&ps);
+      printStuff(ps);
+
       exit(0);
     }
+    // print result after all jobs are done
+    printf("Done\n");
     wait(0);
     getpinfo(&ps);
     printStuff(ps);
   }
-  // wait(0);
-  // getpinfo(&ps);
-  // printStuff(ps);
   exit(0);
 }
 
