@@ -4,67 +4,62 @@
 #include "kernel/pstat.h"
 #include "kernel/spinlock.h"
 
+void printStuff(struct pstat ps);
+
 int
 main(int argc, char **argv)
 {
   struct pstat ps;
-  // settickets(2); // test settickets
-  int pid, i, j, k;
+  int pid, i, k;
+  // fork 6 times
   for(k = 0; k < 6; k++){
     pid = fork();
-    // parent
+    // parent case
     if(pid < 0){
-      // same as panic()
+      // basically panic
       char *s;
-      s = "aaa";
+      s = "Parent forked";
       fprintf(2, "%s\n", s);
       exit(1);
     }
-    // child
+    // child case
     else if(pid == 0){
-    // int j;
-    settickets(10 * k);
-    for(i = 0; i < 1000000; i++){
-      if(k == 0 && i % 1000 == 0){
-        getpinfo(&ps);
-        for(j = 0; j < NPROC; j++){
-          if(ps.tickets[j] > 0){ // only print proc if it might be used ie has tickets
-            printf("PID: %d In use?: %d Tickets: %d Ticks: %d\n", 
-              ps.pid[j],
-              ps.inuse[j],
-              ps.tickets[j],
-              ps.ticks[j]
-            );
-          }
-        }
+      settickets(10 * k);
+      // do work
+      for(i = 0; i < 1000000; i++){
+        // print every so often
+        // if(i == (1000000 - 1)){
+        //   wait(0);
+        //   getpinfo(&ps);
+        //   printStuff(ps);
+        // }
       }
+      // wait(0);
+      // getpinfo(&ps);
+      // printStuff(ps);
+      exit(0);
     }
-    exit(0);
+    wait(0);
+    getpinfo(&ps);
+    printStuff(ps);
   }
-  }
-  /*
-  for()
-  fork
-  if pid == 0
-  settickets(10*count)
-  */
-  // settickets(3);
-  // fork();
-  wait(0);
-  getpinfo(&ps);
-  // iterate over pstat struct
-  i = 0;
-  // int i;
-  // TODO: infinite for loop with sleep every ~5 secs
-  for(i = 0; i < NPROC; i++){
-    if(ps.tickets[i] > 0){ // only print proc if it might be used ie has tickets
+  // wait(0);
+  // getpinfo(&ps);
+  // printStuff(ps);
+  exit(0);
+}
+
+void printStuff(struct pstat ps){
+  int j;
+  for(j = 0; j < NPROC; j++){
+    if(ps.tickets[j] > 0){ // only print proc if it might be used ie has tickets
+    // if(ps.inuse[j] == 1){ // only print proc if it is in use
       printf("PID: %d In use?: %d Tickets: %d Ticks: %d\n", 
-        ps.pid[i],
-        ps.inuse[i],
-        ps.tickets[i],
-        ps.ticks[i]
+        ps.pid[j],
+        ps.inuse[j],
+        ps.tickets[j],
+        ps.ticks[j]
       );
     }
   }
-  exit(0);
 }
