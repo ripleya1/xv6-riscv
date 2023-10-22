@@ -8,35 +8,24 @@ int
 main(int argc, char **argv)
 {
   struct pstat ps;
-  // TODO: problem 1: there are other procs (PIDs 1 and 2)
-  // that take up at least 1 ticket each so how does that math work
-  // problem 2: printing (and presumably everything else) 
-  // gets screwy if I do the test this way
-  // problem 3: actually it's already screwy because with just one 
-  // settickets the proc with 2 tickets consistently has less ticks
-  settickets(2); // test settickets
-  int pid, i;
-  pid = fork();
-  // parent
-  if(pid < 0){
-    // same as panic()
-    char * s;
-    s = "aaa";
-    fprintf(2, "%s\n", s);
-    exit(1);
-  }
-  /*
-  for()
-  fork
-  if pid == 0
-  settickets(10*count)
-  */
-  // child
-  else if(pid == 0){
-    int j;
-    settickets(4);
+  // settickets(2); // test settickets
+  int pid, i, j, k;
+  for(k = 0; k < 6; k++){
+    pid = fork();
+    // parent
+    if(pid < 0){
+      // same as panic()
+      char *s;
+      s = "aaa";
+      fprintf(2, "%s\n", s);
+      exit(1);
+    }
+    // child
+    else if(pid == 0){
+    // int j;
+    settickets(10 * k);
     for(i = 0; i < 1000000; i++){
-      if(i % 1000 == 0){
+      if(k == 0 && i % 1000 == 0){
         getpinfo(&ps);
         for(j = 0; j < NPROC; j++){
           if(ps.tickets[j] > 0){ // only print proc if it might be used ie has tickets
@@ -52,6 +41,13 @@ main(int argc, char **argv)
     }
     exit(0);
   }
+  }
+  /*
+  for()
+  fork
+  if pid == 0
+  settickets(10*count)
+  */
   // settickets(3);
   // fork();
   wait(0);
