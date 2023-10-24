@@ -582,6 +582,7 @@ scheduler(void)
     // Avoid deadlock by ensuring that devices can interrupt.
     intr_on();
     total = 0;
+    count = 0;
     for(p = proc; p < &proc[NPROC]; p++) {
       acquire(&p->lock);
       total += p->tickets;
