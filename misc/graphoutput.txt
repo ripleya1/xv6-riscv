@@ -1,0 +1,892 @@
+PID: 1 In use?: 1 Tickets: 1 Ticks: 14
+PID: 2 In use?: 1 Tickets: 1 Ticks: 13
+PID: 3 In use?: 1 Tickets: 1 Ticks: 7
+PID: 4 In use?: 1 Tickets: 10 Ticks: 1
+PID: 5 In use?: 1 Tickets: 1 Ticks: 1
+PID: 6 In use?: 1 Tickets: 1 Ticks: 0
+Tickets: 10 Increased by: 1
+PID: 1 In use?: 1 Tickets: 1 Ticks: 14
+PID: 2 In use?: 1 Tickets: 1 Ticks: 13
+PID: 3 In use?: 1 Tickets: 1 Ticks: 7
+PID: 4 In use?: 1 Tickets: 10 Ticks: 2
+PID: 5 In use?: 1 Tickets: 20 Ticks: 1
+PID: 6 In use?: 1 Tickets: 30 Ticks: 2
+PID: 7 In use?: 1 Tickets: 40 Ticks: 2
+PID: 8 In use?: 1 Tickets: 50 Ticks: 1
+PID: 9 In use?: 1 Tickets: 60 Ticks: 1
+Tickets: 10 Increased by: 1
+Tickets: 20 Increased by: 1
+Tickets: 30 Increased by: 2
+Tickets: 40 Increased by: 2
+Tickets: 50 Increased by: 1
+Tickets: 60 Increased by: 1
+PID: 1 In use?: 1 Tickets: 1 Ticks: 14
+PID: 2 In use?: 1 Tickets: 1 Ticks: 13
+PID: 3 In use?: 1 Tickets: 1 Ticks: 7
+PID: 4 In use?: 1 Tickets: 10 Ticks: 6
+PID: 5 In use?: 1 Tickets: 20 Ticks: 12
+PID: 6 In use?: 1 Tickets: 30 Ticks: 13
+PID: 7 In use?: 1 Tickets: 40 Ticks: 20
+PID: 8 In use?: 1 Tickets: 50 Ticks: 16
+PID: 9 In use?: 1 Tickets: 60 Ticks: 23
+Tickets: 10 Increased by: 4
+Tickets: 20 Increased by: 11
+Tickets: 30 Increased by: 11
+Tickets: 40 Increased by: 18
+Tickets: 50 Increased by: 15
+Tickets: 60 Increased by: 22
+PID: 1 In use?: 1 Tickets: 1 Ticks: 14
+PID: 2 In use?: 1 Tickets: 1 Ticks: 13
+PID: 3 In use?: 1 Tickets: 1 Ticks: 7
+PID: 4 In use?: 1 Tickets: 10 Ticks: 9
+PID: 5 In use?: 1 Tickets: 20 Ticks: 14
+PID: 6 In use?: 1 Tickets: 30 Ticks: 18
+PID: 7 In use?: 1 Tickets: 40 Ticks: 26
+PID: 8 In use?: 1 Tickets: 50 Ticks: 21
+PID: 9 In use?: 1 Tickets: 60 Ticks: 32
+Tickets: 10 Increased by: 3
+Tickets: 20 Increased by: 2
+Tickets: 30 Increased by: 5
+Tickets: 40 Increased by: 6
+Tickets: 50 Increased by: 5
+Tickets: 60 Increased by: 9
+PID: 1 In use?: 1 Tickets: 1 Ticks: 14
+PID: 2 In use?: 1 Tickets: 1 Ticks: 13
+PID: 3 In use?: 1 Tickets: 1 Ticks: 7
+PID: 4 In use?: 1 Tickets: 10 Ticks: 12
+PID: 5 In use?: 1 Tickets: 20 Ticks: 20
+PID: 6 In use?: 1 Tickets: 30 Ticks: 24
+PID: 7 In use?: 1 Tickets: 40 Ticks: 32
+PID: 8 In use?: 1 Tickets: 50 Ticks: 26
+PID: 9 In use?: 1 Tickets: 60 Ticks: 36
+Tickets: 10 Increased by: 3
+Tickets: 20 Increased by: 6
+Tickets: 30 Increased by: 6
+Tickets: 40 Increased by: 6
+Tickets: 50 Increased by: 5
+Tickets: 60 Increased by: 4
+PID: 1 In use?: 1 Tickets: 1 Ticks: 14
+PID: 2 In use?: 1 Tickets: 1 Ticks: 13
+PID: 3 In use?: 1 Tickets: 1 Ticks: 7
+PID: 4 In use?: 1 Tickets: 10 Ticks: 15
+PID: 5 In use?: 1 Tickets: 20 Ticks: 25
+PID: 6 In use?: 1 Tickets: 30 Ticks: 31
+PID: 7 In use?: 1 Tickets: 40 Ticks: 37
+PID: 8 In use?: 1 Tickets: 50 Ticks: 34
+PID: 9 In use?: 1 Tickets: 60 Ticks: 47
+Tickets: 10 Increased by: 3
+Tickets: 20 Increased by: 5
+Tickets: 30 Increased by: 7
+Tickets: 40 Increased by: 5
+Tickets: 50 Increased by: 8
+Tickets: 60 Increased by: 11
+PID: 1 In use?: 1 Tickets: 1 Ticks: 14
+PID: 2 In use?: 1 Tickets: 1 Ticks: 13
+PID: 3 In use?: 1 Tickets: 1 Ticks: 7
+PID: 4 In use?: 1 Tickets: 10 Ticks: 19
+PID: 5 In use?: 1 Tickets: 20 Ticks: 32
+PID: 6 In use?: 1 Tickets: 30 Ticks: 43
+PID: 7 In use?: 1 Tickets: 40 Ticks: 55
+PID: 8 In use?: 1 Tickets: 50 Ticks: 51
+PID: 9 In use?: 1 Tickets: 60 Ticks: 67
+Tickets: 10 Increased by: 4
+Tickets: 20 Increased by: 7
+Tickets: 30 Increased by: 12
+Tickets: 40 Increased by: 18
+Tickets: 50 Increased by: 17
+Tickets: 60 Increased by: 20
+PID: 1 In use?: 1 Tickets: 1 Ticks: 14
+PID: 2 In use?: 1 Tickets: 1 Ticks: 13
+PID: 3 In use?: 1 Tickets: 1 Ticks: 7
+PID: 4 In use?: 1 Tickets: 10 Ticks: 22
+PID: 5 In use?: 1 Tickets: 20 Ticks: 32
+PID: 6 In use?: 1 Tickets: 30 Ticks: 47
+PID: 7 In use?: 1 Tickets: 40 Ticks: 61
+PID: 8 In use?: 1 Tickets: 50 Ticks: 59
+PID: 9 In use?: 1 Tickets: 60 Ticks: 73
+Tickets: 10 Increased by: 3
+Tickets: 20 Increased by: 0
+Tickets: 30 Increased by: 4
+Tickets: 40 Increased by: 6
+Tickets: 50 Increased by: 8
+Tickets: 60 Increased by: 6
+PID: 1 In use?: 1 Tickets: 1 Ticks: 14
+PID: 2 In use?: 1 Tickets: 1 Ticks: 13
+PID: 3 In use?: 1 Tickets: 1 Ticks: 7
+PID: 4 In use?: 1 Tickets: 10 Ticks: 24
+PID: 5 In use?: 1 Tickets: 20 Ticks: 33
+PID: 6 In use?: 1 Tickets: 30 Ticks: 52
+PID: 7 In use?: 1 Tickets: 40 Ticks: 66
+PID: 8 In use?: 1 Tickets: 50 Ticks: 66
+PID: 9 In use?: 1 Tickets: 60 Ticks: 80
+Tickets: 10 Increased by: 2
+Tickets: 20 Increased by: 1
+Tickets: 30 Increased by: 5
+Tickets: 40 Increased by: 5
+Tickets: 50 Increased by: 7
+Tickets: 60 Increased by: 7
+PID: 1 In use?: 1 Tickets: 1 Ticks: 14
+PID: 2 In use?: 1 Tickets: 1 Ticks: 13
+PID: 3 In use?: 1 Tickets: 1 Ticks: 7
+PID: 4 In use?: 1 Tickets: 10 Ticks: 28
+PID: 5 In use?: 1 Tickets: 20 Ticks: 34
+PID: 6 In use?: 1 Tickets: 30 Ticks: 55
+PID: 7 In use?: 1 Tickets: 40 Ticks: 70
+PID: 8 In use?: 1 Tickets: 50 Ticks: 71
+PID: 9 In use?: 1 Tickets: 60 Ticks: 84
+Tickets: 10 Increased by: 4
+Tickets: 20 Increased by: 1
+Tickets: 30 Increased by: 3
+Tickets: 40 Increased by: 4
+Tickets: 50 Increased by: 5
+Tickets: 60 Increased by: 4
+PID: 1 In use?: 1 Tickets: 1 Ticks: 14
+PID: 2 In use?: 1 Tickets: 1 Ticks: 13
+PID: 3 In use?: 1 Tickets: 1 Ticks: 7
+PID: 4 In use?: 1 Tickets: 10 Ticks: 32
+PID: 5 In use?: 1 Tickets: 20 Ticks: 41
+PID: 6 In use?: 1 Tickets: 30 Ticks: 66
+PID: 7 In use?: 1 Tickets: 40 Ticks: 79
+PID: 8 In use?: 1 Tickets: 50 Ticks: 78
+PID: 9 In use?: 1 Tickets: 60 Ticks: 94
+Tickets: 10 Increased by: 4
+Tickets: 20 Increased by: 7
+Tickets: 30 Increased by: 11
+Tickets: 40 Increased by: 9
+Tickets: 50 Increased by: 7
+Tickets: 60 Increased by: 10
+PID: 1 In use?: 1 Tickets: 1 Ticks: 14
+PID: 2 In use?: 1 Tickets: 1 Ticks: 13
+PID: 3 In use?: 1 Tickets: 1 Ticks: 7
+PID: 4 In use?: 1 Tickets: 10 Ticks: 36
+PID: 5 In use?: 1 Tickets: 20 Ticks: 48
+PID: 6 In use?: 1 Tickets: 30 Ticks: 76
+PID: 7 In use?: 1 Tickets: 40 Ticks: 96
+PID: 8 In use?: 1 Tickets: 50 Ticks: 97
+PID: 9 In use?: 1 Tickets: 60 Ticks: 112
+Tickets: 10 Increased by: 4
+Tickets: 20 Increased by: 7
+Tickets: 30 Increased by: 10
+Tickets: 40 Increased by: 17
+Tickets: 50 Increased by: 19
+Tickets: 60 Increased by: 18
+PID: 1 In use?: 1 Tickets: 1 Ticks: 14
+PID: 2 In use?: 1 Tickets: 1 Ticks: 13
+PID: 3 In use?: 1 Tickets: 1 Ticks: 7
+PID: 4 In use?: 1 Tickets: 10 Ticks: 39
+PID: 5 In use?: 1 Tickets: 20 Ticks: 57
+PID: 6 In use?: 1 Tickets: 30 Ticks: 86
+PID: 7 In use?: 1 Tickets: 40 Ticks: 104
+PID: 8 In use?: 1 Tickets: 50 Ticks: 108
+PID: 9 In use?: 1 Tickets: 60 Ticks: 126
+Tickets: 10 Increased by: 3
+Tickets: 20 Increased by: 9
+Tickets: 30 Increased by: 10
+Tickets: 40 Increased by: 8
+Tickets: 50 Increased by: 11
+Tickets: 60 Increased by: 14
+PID: 1 In use?: 1 Tickets: 1 Ticks: 14
+PID: 2 In use?: 1 Tickets: 1 Ticks: 13
+PID: 3 In use?: 1 Tickets: 1 Ticks: 7
+PID: 4 In use?: 1 Tickets: 10 Ticks: 42
+PID: 5 In use?: 1 Tickets: 20 Ticks: 61
+PID: 6 In use?: 1 Tickets: 30 Ticks: 97
+PID: 7 In use?: 1 Tickets: 40 Ticks: 121
+PID: 8 In use?: 1 Tickets: 50 Ticks: 124
+PID: 9 In use?: 1 Tickets: 60 Ticks: 143
+Tickets: 10 Increased by: 3
+Tickets: 20 Increased by: 4
+Tickets: 30 Increased by: 11
+Tickets: 40 Increased by: 17
+Tickets: 50 Increased by: 16
+Tickets: 60 Increased by: 17
+PID: 1 In use?: 1 Tickets: 1 Ticks: 14
+PID: 2 In use?: 1 Tickets: 1 Ticks: 13
+PID: 3 In use?: 1 Tickets: 1 Ticks: 7
+PID: 4 In use?: 1 Tickets: 10 Ticks: 45
+PID: 5 In use?: 1 Tickets: 20 Ticks: 64
+PID: 6 In use?: 1 Tickets: 30 Ticks: 107
+PID: 7 In use?: 1 Tickets: 40 Ticks: 129
+PID: 8 In use?: 1 Tickets: 50 Ticks: 136
+PID: 9 In use?: 1 Tickets: 60 Ticks: 155
+Tickets: 10 Increased by: 3
+Tickets: 20 Increased by: 3
+Tickets: 30 Increased by: 10
+Tickets: 40 Increased by: 8
+Tickets: 50 Increased by: 12
+Tickets: 60 Increased by: 12
+PID: 1 In use?: 1 Tickets: 1 Ticks: 14
+PID: 2 In use?: 1 Tickets: 1 Ticks: 13
+PID: 3 In use?: 1 Tickets: 1 Ticks: 7
+PID: 4 In use?: 1 Tickets: 10 Ticks: 49
+PID: 5 In use?: 1 Tickets: 20 Ticks: 72
+PID: 6 In use?: 1 Tickets: 30 Ticks: 120
+PID: 7 In use?: 1 Tickets: 40 Ticks: 146
+PID: 8 In use?: 1 Tickets: 50 Ticks: 157
+PID: 9 In use?: 1 Tickets: 60 Ticks: 176
+Tickets: 10 Increased by: 4
+Tickets: 20 Increased by: 8
+Tickets: 30 Increased by: 13
+Tickets: 40 Increased by: 17
+Tickets: 50 Increased by: 21
+Tickets: 60 Increased by: 21
+PID: 1 In use?: 1 Tickets: 1 Ticks: 14
+PID: 2 In use?: 1 Tickets: 1 Ticks: 13
+PID: 3 In use?: 1 Tickets: 1 Ticks: 7
+PID: 4 In use?: 1 Tickets: 10 Ticks: 52
+PID: 5 In use?: 1 Tickets: 20 Ticks: 78
+PID: 6 In use?: 1 Tickets: 30 Ticks: 124
+PID: 7 In use?: 1 Tickets: 40 Ticks: 151
+PID: 8 In use?: 1 Tickets: 50 Ticks: 163
+PID: 9 In use?: 1 Tickets: 60 Ticks: 182
+Tickets: 10 Increased by: 3
+Tickets: 20 Increased by: 6
+Tickets: 30 Increased by: 4
+Tickets: 40 Increased by: 5
+Tickets: 50 Increased by: 6
+Tickets: 60 Increased by: 6
+PID: 1 In use?: 1 Tickets: 1 Ticks: 14
+PID: 2 In use?: 1 Tickets: 1 Ticks: 13
+PID: 3 In use?: 1 Tickets: 1 Ticks: 7
+PID: 4 In use?: 1 Tickets: 10 Ticks: 55
+PID: 5 In use?: 1 Tickets: 20 Ticks: 81
+PID: 6 In use?: 1 Tickets: 30 Ticks: 126
+PID: 7 In use?: 1 Tickets: 40 Ticks: 154
+PID: 8 In use?: 1 Tickets: 50 Ticks: 170
+PID: 9 In use?: 1 Tickets: 60 Ticks: 188
+Tickets: 10 Increased by: 3
+Tickets: 20 Increased by: 3
+Tickets: 30 Increased by: 2
+Tickets: 40 Increased by: 3
+Tickets: 50 Increased by: 7
+Tickets: 60 Increased by: 6
+PID: 1 In use?: 1 Tickets: 1 Ticks: 14
+PID: 2 In use?: 1 Tickets: 1 Ticks: 13
+PID: 3 In use?: 1 Tickets: 1 Ticks: 7
+PID: 4 In use?: 1 Tickets: 10 Ticks: 58
+PID: 5 In use?: 1 Tickets: 20 Ticks: 90
+PID: 6 In use?: 1 Tickets: 30 Ticks: 135
+PID: 7 In use?: 1 Tickets: 40 Ticks: 167
+PID: 8 In use?: 1 Tickets: 50 Ticks: 185
+PID: 9 In use?: 1 Tickets: 60 Ticks: 207
+Tickets: 10 Increased by: 3
+Tickets: 20 Increased by: 9
+Tickets: 30 Increased by: 9
+Tickets: 40 Increased by: 13
+Tickets: 50 Increased by: 15
+Tickets: 60 Increased by: 19
+PID: 1 In use?: 1 Tickets: 1 Ticks: 14
+PID: 2 In use?: 1 Tickets: 1 Ticks: 13
+PID: 3 In use?: 1 Tickets: 1 Ticks: 7
+PID: 4 In use?: 1 Tickets: 10 Ticks: 61
+PID: 5 In use?: 1 Tickets: 20 Ticks: 96
+PID: 6 In use?: 1 Tickets: 30 Ticks: 142
+PID: 7 In use?: 1 Tickets: 40 Ticks: 178
+PID: 8 In use?: 1 Tickets: 50 Ticks: 199
+PID: 9 In use?: 1 Tickets: 60 Ticks: 221
+Tickets: 10 Increased by: 3
+Tickets: 20 Increased by: 6
+Tickets: 30 Increased by: 7
+Tickets: 40 Increased by: 11
+Tickets: 50 Increased by: 14
+Tickets: 60 Increased by: 14
+PID: 1 In use?: 1 Tickets: 1 Ticks: 14
+PID: 2 In use?: 1 Tickets: 1 Ticks: 13
+PID: 3 In use?: 1 Tickets: 1 Ticks: 7
+PID: 4 In use?: 1 Tickets: 10 Ticks: 64
+PID: 5 In use?: 1 Tickets: 20 Ticks: 97
+PID: 6 In use?: 1 Tickets: 30 Ticks: 146
+PID: 7 In use?: 1 Tickets: 40 Ticks: 184
+PID: 8 In use?: 1 Tickets: 50 Ticks: 205
+PID: 9 In use?: 1 Tickets: 60 Ticks: 228
+Tickets: 10 Increased by: 3
+Tickets: 20 Increased by: 1
+Tickets: 30 Increased by: 4
+Tickets: 40 Increased by: 6
+Tickets: 50 Increased by: 6
+Tickets: 60 Increased by: 7
+PID: 1 In use?: 1 Tickets: 1 Ticks: 14
+PID: 2 In use?: 1 Tickets: 1 Ticks: 13
+PID: 3 In use?: 1 Tickets: 1 Ticks: 7
+PID: 4 In use?: 1 Tickets: 10 Ticks: 67
+PID: 5 In use?: 1 Tickets: 20 Ticks: 100
+PID: 6 In use?: 1 Tickets: 30 Ticks: 149
+PID: 7 In use?: 1 Tickets: 40 Ticks: 187
+PID: 8 In use?: 1 Tickets: 50 Ticks: 211
+PID: 9 In use?: 1 Tickets: 60 Ticks: 231
+Tickets: 10 Increased by: 3
+Tickets: 20 Increased by: 3
+Tickets: 30 Increased by: 3
+Tickets: 40 Increased by: 3
+Tickets: 50 Increased by: 6
+Tickets: 60 Increased by: 3
+PID: 1 In use?: 1 Tickets: 1 Ticks: 14
+PID: 2 In use?: 1 Tickets: 1 Ticks: 13
+PID: 3 In use?: 1 Tickets: 1 Ticks: 7
+PID: 4 In use?: 1 Tickets: 10 Ticks: 71
+PID: 5 In use?: 1 Tickets: 20 Ticks: 111
+PID: 6 In use?: 1 Tickets: 30 Ticks: 163
+PID: 7 In use?: 1 Tickets: 40 Ticks: 200
+PID: 8 In use?: 1 Tickets: 50 Ticks: 231
+PID: 9 In use?: 1 Tickets: 60 Ticks: 256
+Tickets: 10 Increased by: 4
+Tickets: 20 Increased by: 11
+Tickets: 30 Increased by: 14
+Tickets: 40 Increased by: 13
+Tickets: 50 Increased by: 20
+Tickets: 60 Increased by: 25
+PID: 1 In use?: 1 Tickets: 1 Ticks: 14
+PID: 2 In use?: 1 Tickets: 1 Ticks: 13
+PID: 3 In use?: 1 Tickets: 1 Ticks: 7
+PID: 4 In use?: 1 Tickets: 10 Ticks: 74
+PID: 5 In use?: 1 Tickets: 20 Ticks: 123
+PID: 6 In use?: 1 Tickets: 30 Ticks: 180
+PID: 7 In use?: 1 Tickets: 40 Ticks: 218
+PID: 8 In use?: 1 Tickets: 50 Ticks: 253
+PID: 9 In use?: 1 Tickets: 60 Ticks: 277
+Tickets: 10 Increased by: 3
+Tickets: 20 Increased by: 12
+Tickets: 30 Increased by: 17
+Tickets: 40 Increased by: 18
+Tickets: 50 Increased by: 22
+Tickets: 60 Increased by: 21
+PID: 1 In use?: 1 Tickets: 1 Ticks: 14
+PID: 2 In use?: 1 Tickets: 1 Ticks: 13
+PID: 3 In use?: 1 Tickets: 1 Ticks: 7
+PID: 4 In use?: 1 Tickets: 10 Ticks: 78
+PID: 5 In use?: 1 Tickets: 20 Ticks: 134
+PID: 6 In use?: 1 Tickets: 30 Ticks: 201
+PID: 7 In use?: 1 Tickets: 40 Ticks: 241
+PID: 8 In use?: 1 Tickets: 50 Ticks: 281
+PID: 9 In use?: 1 Tickets: 60 Ticks: 307
+Tickets: 10 Increased by: 4
+Tickets: 20 Increased by: 11
+Tickets: 30 Increased by: 21
+Tickets: 40 Increased by: 23
+Tickets: 50 Increased by: 28
+Tickets: 60 Increased by: 30
+PID: 1 In use?: 1 Tickets: 1 Ticks: 14
+PID: 2 In use?: 1 Tickets: 1 Ticks: 13
+PID: 3 In use?: 1 Tickets: 1 Ticks: 7
+PID: 4 In use?: 1 Tickets: 10 Ticks: 81
+PID: 5 In use?: 1 Tickets: 20 Ticks: 140
+PID: 6 In use?: 1 Tickets: 30 Ticks: 209
+PID: 7 In use?: 1 Tickets: 40 Ticks: 252
+PID: 8 In use?: 1 Tickets: 50 Ticks: 293
+PID: 9 In use?: 1 Tickets: 60 Ticks: 318
+Tickets: 10 Increased by: 3
+Tickets: 20 Increased by: 6
+Tickets: 30 Increased by: 8
+Tickets: 40 Increased by: 11
+Tickets: 50 Increased by: 12
+Tickets: 60 Increased by: 11
+PID: 1 In use?: 1 Tickets: 1 Ticks: 14
+PID: 2 In use?: 1 Tickets: 1 Ticks: 13
+PID: 3 In use?: 1 Tickets: 1 Ticks: 7
+PID: 4 In use?: 1 Tickets: 10 Ticks: 85
+PID: 5 In use?: 1 Tickets: 20 Ticks: 149
+PID: 6 In use?: 1 Tickets: 30 Ticks: 215
+PID: 7 In use?: 1 Tickets: 40 Ticks: 262
+PID: 8 In use?: 1 Tickets: 50 Ticks: 305
+PID: 9 In use?: 1 Tickets: 60 Ticks: 331
+Tickets: 10 Increased by: 4
+Tickets: 20 Increased by: 9
+Tickets: 30 Increased by: 6
+Tickets: 40 Increased by: 10
+Tickets: 50 Increased by: 12
+Tickets: 60 Increased by: 13
+PID: 1 In use?: 1 Tickets: 1 Ticks: 14
+PID: 2 In use?: 1 Tickets: 1 Ticks: 13
+PID: 3 In use?: 1 Tickets: 1 Ticks: 7
+PID: 4 In use?: 1 Tickets: 10 Ticks: 88
+PID: 5 In use?: 1 Tickets: 20 Ticks: 152
+PID: 6 In use?: 1 Tickets: 30 Ticks: 226
+PID: 7 In use?: 1 Tickets: 40 Ticks: 271
+PID: 8 In use?: 1 Tickets: 50 Ticks: 317
+PID: 9 In use?: 1 Tickets: 60 Ticks: 344
+Tickets: 10 Increased by: 3
+Tickets: 20 Increased by: 3
+Tickets: 30 Increased by: 11
+Tickets: 40 Increased by: 9
+Tickets: 50 Increased by: 12
+Tickets: 60 Increased by: 13
+PID: 1 In use?: 1 Tickets: 1 Ticks: 14
+PID: 2 In use?: 1 Tickets: 1 Ticks: 13
+PID: 3 In use?: 1 Tickets: 1 Ticks: 7
+PID: 4 In use?: 1 Tickets: 10 Ticks: 92
+PID: 5 In use?: 1 Tickets: 20 Ticks: 158
+PID: 6 In use?: 1 Tickets: 30 Ticks: 234
+PID: 7 In use?: 1 Tickets: 40 Ticks: 288
+PID: 8 In use?: 1 Tickets: 50 Ticks: 336
+PID: 9 In use?: 1 Tickets: 60 Ticks: 359
+Tickets: 10 Increased by: 4
+Tickets: 20 Increased by: 6
+Tickets: 30 Increased by: 8
+Tickets: 40 Increased by: 17
+Tickets: 50 Increased by: 19
+Tickets: 60 Increased by: 15
+PID: 1 In use?: 1 Tickets: 1 Ticks: 14
+PID: 2 In use?: 1 Tickets: 1 Ticks: 13
+PID: 3 In use?: 1 Tickets: 1 Ticks: 7
+PID: 4 In use?: 1 Tickets: 10 Ticks: 97
+PID: 5 In use?: 1 Tickets: 20 Ticks: 170
+PID: 6 In use?: 1 Tickets: 30 Ticks: 254
+PID: 7 In use?: 1 Tickets: 40 Ticks: 310
+PID: 8 In use?: 1 Tickets: 50 Ticks: 355
+PID: 9 In use?: 1 Tickets: 60 Ticks: 383
+Tickets: 10 Increased by: 5
+Tickets: 20 Increased by: 12
+Tickets: 30 Increased by: 20
+Tickets: 40 Increased by: 22
+Tickets: 50 Increased by: 19
+Tickets: 60 Increased by: 24
+PID: 1 In use?: 1 Tickets: 1 Ticks: 14
+PID: 2 In use?: 1 Tickets: 1 Ticks: 13
+PID: 3 In use?: 1 Tickets: 1 Ticks: 7
+PID: 4 In use?: 1 Tickets: 10 Ticks: 101
+PID: 5 In use?: 1 Tickets: 20 Ticks: 183
+PID: 6 In use?: 1 Tickets: 30 Ticks: 278
+PID: 7 In use?: 1 Tickets: 40 Ticks: 337
+PID: 8 In use?: 1 Tickets: 50 Ticks: 390
+PID: 9 In use?: 1 Tickets: 60 Ticks: 415
+Tickets: 10 Increased by: 4
+Tickets: 20 Increased by: 13
+Tickets: 30 Increased by: 24
+Tickets: 40 Increased by: 27
+Tickets: 50 Increased by: 35
+Tickets: 60 Increased by: 32
+PID: 1 In use?: 1 Tickets: 1 Ticks: 14
+PID: 2 In use?: 1 Tickets: 1 Ticks: 13
+PID: 3 In use?: 1 Tickets: 1 Ticks: 7
+PID: 4 In use?: 1 Tickets: 10 Ticks: 107
+PID: 5 In use?: 1 Tickets: 20 Ticks: 189
+PID: 6 In use?: 1 Tickets: 30 Ticks: 287
+PID: 7 In use?: 1 Tickets: 40 Ticks: 348
+PID: 8 In use?: 1 Tickets: 50 Ticks: 403
+PID: 9 In use?: 1 Tickets: 60 Ticks: 433
+Tickets: 10 Increased by: 6
+Tickets: 20 Increased by: 6
+Tickets: 30 Increased by: 9
+Tickets: 40 Increased by: 11
+Tickets: 50 Increased by: 13
+Tickets: 60 Increased by: 18
+PID: 1 In use?: 1 Tickets: 1 Ticks: 14
+PID: 2 In use?: 1 Tickets: 1 Ticks: 13
+PID: 3 In use?: 1 Tickets: 1 Ticks: 7
+PID: 4 In use?: 1 Tickets: 10 Ticks: 112
+PID: 5 In use?: 1 Tickets: 20 Ticks: 201
+PID: 6 In use?: 1 Tickets: 30 Ticks: 301
+PID: 7 In use?: 1 Tickets: 40 Ticks: 365
+PID: 8 In use?: 1 Tickets: 50 Ticks: 425
+PID: 9 In use?: 1 Tickets: 60 Ticks: 453
+Tickets: 10 Increased by: 5
+Tickets: 20 Increased by: 12
+Tickets: 30 Increased by: 14
+Tickets: 40 Increased by: 17
+Tickets: 50 Increased by: 22
+Tickets: 60 Increased by: 20
+PID: 1 In use?: 1 Tickets: 1 Ticks: 14
+PID: 2 In use?: 1 Tickets: 1 Ticks: 13
+PID: 3 In use?: 1 Tickets: 1 Ticks: 7
+PID: 4 In use?: 1 Tickets: 10 Ticks: 116
+PID: 5 In use?: 1 Tickets: 20 Ticks: 209
+PID: 6 In use?: 1 Tickets: 30 Ticks: 312
+PID: 7 In use?: 1 Tickets: 40 Ticks: 376
+PID: 8 In use?: 1 Tickets: 50 Ticks: 437
+PID: 9 In use?: 1 Tickets: 60 Ticks: 464
+Tickets: 10 Increased by: 4
+Tickets: 20 Increased by: 8
+Tickets: 30 Increased by: 11
+Tickets: 40 Increased by: 11
+Tickets: 50 Increased by: 12
+Tickets: 60 Increased by: 11
+PID: 1 In use?: 1 Tickets: 1 Ticks: 14
+PID: 2 In use?: 1 Tickets: 1 Ticks: 13
+PID: 3 In use?: 1 Tickets: 1 Ticks: 7
+PID: 4 In use?: 1 Tickets: 10 Ticks: 121
+PID: 5 In use?: 1 Tickets: 20 Ticks: 215
+PID: 6 In use?: 1 Tickets: 30 Ticks: 329
+PID: 7 In use?: 1 Tickets: 40 Ticks: 390
+PID: 8 In use?: 1 Tickets: 50 Ticks: 453
+PID: 9 In use?: 1 Tickets: 60 Ticks: 475
+Tickets: 10 Increased by: 5
+Tickets: 20 Increased by: 6
+Tickets: 30 Increased by: 17
+Tickets: 40 Increased by: 14
+Tickets: 50 Increased by: 16
+Tickets: 60 Increased by: 11
+PID: 1 In use?: 1 Tickets: 1 Ticks: 14
+PID: 2 In use?: 1 Tickets: 1 Ticks: 13
+PID: 3 In use?: 1 Tickets: 1 Ticks: 7
+PID: 4 In use?: 1 Tickets: 10 Ticks: 126
+PID: 5 In use?: 1 Tickets: 20 Ticks: 219
+PID: 6 In use?: 1 Tickets: 30 Ticks: 334
+PID: 7 In use?: 1 Tickets: 40 Ticks: 402
+PID: 8 In use?: 1 Tickets: 50 Ticks: 470
+PID: 9 In use?: 1 Tickets: 60 Ticks: 489
+Tickets: 10 Increased by: 5
+Tickets: 20 Increased by: 4
+Tickets: 30 Increased by: 5
+Tickets: 40 Increased by: 12
+Tickets: 50 Increased by: 17
+Tickets: 60 Increased by: 14
+PID: 1 In use?: 1 Tickets: 1 Ticks: 14
+PID: 2 In use?: 1 Tickets: 1 Ticks: 13
+PID: 3 In use?: 1 Tickets: 1 Ticks: 7
+PID: 4 In use?: 1 Tickets: 10 Ticks: 130
+PID: 5 In use?: 1 Tickets: 20 Ticks: 222
+PID: 6 In use?: 1 Tickets: 30 Ticks: 340
+PID: 7 In use?: 1 Tickets: 40 Ticks: 409
+PID: 8 In use?: 1 Tickets: 50 Ticks: 478
+PID: 9 In use?: 1 Tickets: 60 Ticks: 500
+Tickets: 10 Increased by: 4
+Tickets: 20 Increased by: 3
+Tickets: 30 Increased by: 6
+Tickets: 40 Increased by: 7
+Tickets: 50 Increased by: 8
+Tickets: 60 Increased by: 11
+PID: 1 In use?: 1 Tickets: 1 Ticks: 14
+PID: 2 In use?: 1 Tickets: 1 Ticks: 13
+PID: 3 In use?: 1 Tickets: 1 Ticks: 7
+PID: 4 In use?: 1 Tickets: 10 Ticks: 135
+PID: 5 In use?: 1 Tickets: 20 Ticks: 229
+PID: 6 In use?: 1 Tickets: 30 Ticks: 344
+PID: 7 In use?: 1 Tickets: 40 Ticks: 422
+PID: 8 In use?: 1 Tickets: 50 Ticks: 490
+PID: 9 In use?: 1 Tickets: 60 Ticks: 513
+Tickets: 10 Increased by: 5
+Tickets: 20 Increased by: 7
+Tickets: 30 Increased by: 4
+Tickets: 40 Increased by: 13
+Tickets: 50 Increased by: 12
+Tickets: 60 Increased by: 13
+PID: 1 In use?: 1 Tickets: 1 Ticks: 14
+PID: 2 In use?: 1 Tickets: 1 Ticks: 13
+PID: 3 In use?: 1 Tickets: 1 Ticks: 7
+PID: 4 In use?: 1 Tickets: 10 Ticks: 139
+PID: 5 In use?: 1 Tickets: 20 Ticks: 235
+PID: 6 In use?: 1 Tickets: 30 Ticks: 350
+PID: 7 In use?: 1 Tickets: 40 Ticks: 433
+PID: 8 In use?: 1 Tickets: 50 Ticks: 500
+PID: 9 In use?: 1 Tickets: 60 Ticks: 524
+Tickets: 10 Increased by: 4
+Tickets: 20 Increased by: 6
+Tickets: 30 Increased by: 6
+Tickets: 40 Increased by: 11
+Tickets: 50 Increased by: 10
+Tickets: 60 Increased by: 11
+PID: 1 In use?: 1 Tickets: 1 Ticks: 14
+PID: 2 In use?: 1 Tickets: 1 Ticks: 13
+PID: 3 In use?: 1 Tickets: 1 Ticks: 7
+PID: 4 In use?: 1 Tickets: 10 Ticks: 143
+PID: 5 In use?: 1 Tickets: 20 Ticks: 240
+PID: 6 In use?: 1 Tickets: 30 Ticks: 357
+PID: 7 In use?: 1 Tickets: 40 Ticks: 439
+PID: 8 In use?: 1 Tickets: 50 Ticks: 510
+PID: 9 In use?: 1 Tickets: 60 Ticks: 537
+Tickets: 10 Increased by: 4
+Tickets: 20 Increased by: 5
+Tickets: 30 Increased by: 7
+Tickets: 40 Increased by: 6
+Tickets: 50 Increased by: 10
+Tickets: 60 Increased by: 13
+PID: 1 In use?: 1 Tickets: 1 Ticks: 14
+PID: 2 In use?: 1 Tickets: 1 Ticks: 13
+PID: 3 In use?: 1 Tickets: 1 Ticks: 7
+PID: 4 In use?: 1 Tickets: 10 Ticks: 148
+PID: 5 In use?: 1 Tickets: 20 Ticks: 243
+PID: 6 In use?: 1 Tickets: 30 Ticks: 362
+PID: 7 In use?: 1 Tickets: 40 Ticks: 444
+PID: 8 In use?: 1 Tickets: 50 Ticks: 518
+PID: 9 In use?: 1 Tickets: 60 Ticks: 544
+Tickets: 10 Increased by: 5
+Tickets: 20 Increased by: 3
+Tickets: 30 Increased by: 5
+Tickets: 40 Increased by: 5
+Tickets: 50 Increased by: 8
+Tickets: 60 Increased by: 7
+PID: 1 In use?: 1 Tickets: 1 Ticks: 14
+PID: 2 In use?: 1 Tickets: 1 Ticks: 13
+PID: 3 In use?: 1 Tickets: 1 Ticks: 7
+PID: 4 In use?: 1 Tickets: 10 Ticks: 151
+PID: 5 In use?: 1 Tickets: 20 Ticks: 245
+PID: 6 In use?: 1 Tickets: 30 Ticks: 368
+PID: 7 In use?: 1 Tickets: 40 Ticks: 452
+PID: 8 In use?: 1 Tickets: 50 Ticks: 525
+PID: 9 In use?: 1 Tickets: 60 Ticks: 554
+Tickets: 10 Increased by: 3
+Tickets: 20 Increased by: 2
+Tickets: 30 Increased by: 6
+Tickets: 40 Increased by: 8
+Tickets: 50 Increased by: 7
+Tickets: 60 Increased by: 10
+PID: 1 In use?: 1 Tickets: 1 Ticks: 14
+PID: 2 In use?: 1 Tickets: 1 Ticks: 13
+PID: 3 In use?: 1 Tickets: 1 Ticks: 7
+PID: 4 In use?: 1 Tickets: 10 Ticks: 155
+PID: 5 In use?: 1 Tickets: 20 Ticks: 253
+PID: 6 In use?: 1 Tickets: 30 Ticks: 384
+PID: 7 In use?: 1 Tickets: 40 Ticks: 468
+PID: 8 In use?: 1 Tickets: 50 Ticks: 543
+PID: 9 In use?: 1 Tickets: 60 Ticks: 579
+Tickets: 10 Increased by: 4
+Tickets: 20 Increased by: 8
+Tickets: 30 Increased by: 16
+Tickets: 40 Increased by: 16
+Tickets: 50 Increased by: 18
+Tickets: 60 Increased by: 25
+PID: 1 In use?: 1 Tickets: 1 Ticks: 14
+PID: 2 In use?: 1 Tickets: 1 Ticks: 13
+PID: 3 In use?: 1 Tickets: 1 Ticks: 7
+PID: 4 In use?: 1 Tickets: 10 Ticks: 158
+PID: 5 In use?: 1 Tickets: 20 Ticks: 257
+PID: 6 In use?: 1 Tickets: 30 Ticks: 394
+PID: 7 In use?: 1 Tickets: 40 Ticks: 474
+PID: 8 In use?: 1 Tickets: 50 Ticks: 552
+PID: 9 In use?: 1 Tickets: 60 Ticks: 589
+Tickets: 10 Increased by: 3
+Tickets: 20 Increased by: 4
+Tickets: 30 Increased by: 10
+Tickets: 40 Increased by: 6
+Tickets: 50 Increased by: 9
+Tickets: 60 Increased by: 10
+PID: 1 In use?: 1 Tickets: 1 Ticks: 14
+PID: 2 In use?: 1 Tickets: 1 Ticks: 13
+PID: 3 In use?: 1 Tickets: 1 Ticks: 7
+PID: 4 In use?: 1 Tickets: 10 Ticks: 162
+PID: 5 In use?: 1 Tickets: 20 Ticks: 263
+PID: 6 In use?: 1 Tickets: 30 Ticks: 400
+PID: 7 In use?: 1 Tickets: 40 Ticks: 483
+PID: 8 In use?: 1 Tickets: 50 Ticks: 560
+PID: 9 In use?: 1 Tickets: 60 Ticks: 601
+Tickets: 10 Increased by: 4
+Tickets: 20 Increased by: 6
+Tickets: 30 Increased by: 6
+Tickets: 40 Increased by: 9
+Tickets: 50 Increased by: 8
+Tickets: 60 Increased by: 12
+PID: 1 In use?: 1 Tickets: 1 Ticks: 14
+PID: 2 In use?: 1 Tickets: 1 Ticks: 13
+PID: 3 In use?: 1 Tickets: 1 Ticks: 7
+PID: 4 In use?: 1 Tickets: 10 Ticks: 166
+PID: 5 In use?: 1 Tickets: 20 Ticks: 268
+PID: 6 In use?: 1 Tickets: 30 Ticks: 405
+PID: 7 In use?: 1 Tickets: 40 Ticks: 490
+PID: 8 In use?: 1 Tickets: 50 Ticks: 568
+PID: 9 In use?: 1 Tickets: 60 Ticks: 608
+Tickets: 10 Increased by: 4
+Tickets: 20 Increased by: 5
+Tickets: 30 Increased by: 5
+Tickets: 40 Increased by: 7
+Tickets: 50 Increased by: 8
+Tickets: 60 Increased by: 7
+PID: 1 In use?: 1 Tickets: 1 Ticks: 14
+PID: 2 In use?: 1 Tickets: 1 Ticks: 13
+PID: 3 In use?: 1 Tickets: 1 Ticks: 7
+PID: 4 In use?: 1 Tickets: 10 Ticks: 170
+PID: 5 In use?: 1 Tickets: 20 Ticks: 270
+PID: 6 In use?: 1 Tickets: 30 Ticks: 409
+PID: 7 In use?: 1 Tickets: 40 Ticks: 497
+PID: 8 In use?: 1 Tickets: 50 Ticks: 577
+PID: 9 In use?: 1 Tickets: 60 Ticks: 615
+Tickets: 10 Increased by: 4
+Tickets: 20 Increased by: 2
+Tickets: 30 Increased by: 4
+Tickets: 40 Increased by: 7
+Tickets: 50 Increased by: 9
+Tickets: 60 Increased by: 7
+PID: 1 In use?: 1 Tickets: 1 Ticks: 14
+PID: 2 In use?: 1 Tickets: 1 Ticks: 13
+PID: 3 In use?: 1 Tickets: 1 Ticks: 7
+PID: 4 In use?: 1 Tickets: 10 Ticks: 173
+PID: 5 In use?: 1 Tickets: 20 Ticks: 276
+PID: 6 In use?: 1 Tickets: 30 Ticks: 415
+PID: 7 In use?: 1 Tickets: 40 Ticks: 508
+PID: 8 In use?: 1 Tickets: 50 Ticks: 587
+PID: 9 In use?: 1 Tickets: 60 Ticks: 624
+Tickets: 10 Increased by: 3
+Tickets: 20 Increased by: 6
+Tickets: 30 Increased by: 6
+Tickets: 40 Increased by: 11
+Tickets: 50 Increased by: 10
+Tickets: 60 Increased by: 9
+PID: 1 In use?: 1 Tickets: 1 Ticks: 14
+PID: 2 In use?: 1 Tickets: 1 Ticks: 13
+PID: 3 In use?: 1 Tickets: 1 Ticks: 7
+PID: 4 In use?: 1 Tickets: 10 Ticks: 177
+PID: 5 In use?: 1 Tickets: 20 Ticks: 292
+PID: 6 In use?: 1 Tickets: 30 Ticks: 433
+PID: 7 In use?: 1 Tickets: 40 Ticks: 531
+PID: 8 In use?: 1 Tickets: 50 Ticks: 613
+PID: 9 In use?: 1 Tickets: 60 Ticks: 654
+Tickets: 10 Increased by: 4
+Tickets: 20 Increased by: 16
+Tickets: 30 Increased by: 18
+Tickets: 40 Increased by: 23
+Tickets: 50 Increased by: 26
+Tickets: 60 Increased by: 30
+PID: 1 In use?: 1 Tickets: 1 Ticks: 14
+PID: 2 In use?: 1 Tickets: 1 Ticks: 13
+PID: 3 In use?: 1 Tickets: 1 Ticks: 7
+PID: 4 In use?: 1 Tickets: 10 Ticks: 182
+PID: 5 In use?: 1 Tickets: 20 Ticks: 295
+PID: 6 In use?: 1 Tickets: 30 Ticks: 439
+PID: 7 In use?: 1 Tickets: 40 Ticks: 538
+PID: 8 In use?: 1 Tickets: 50 Ticks: 622
+PID: 9 In use?: 1 Tickets: 60 Ticks: 669
+Tickets: 10 Increased by: 5
+Tickets: 20 Increased by: 3
+Tickets: 30 Increased by: 6
+Tickets: 40 Increased by: 7
+Tickets: 50 Increased by: 9
+Tickets: 60 Increased by: 15
+PID: 1 In use?: 1 Tickets: 1 Ticks: 14
+PID: 2 In use?: 1 Tickets: 1 Ticks: 13
+PID: 3 In use?: 1 Tickets: 1 Ticks: 7
+PID: 4 In use?: 1 Tickets: 10 Ticks: 186
+PID: 5 In use?: 1 Tickets: 20 Ticks: 305
+PID: 6 In use?: 1 Tickets: 30 Ticks: 448
+PID: 7 In use?: 1 Tickets: 40 Ticks: 550
+PID: 8 In use?: 1 Tickets: 50 Ticks: 643
+PID: 9 In use?: 1 Tickets: 60 Ticks: 688
+Tickets: 10 Increased by: 4
+Tickets: 20 Increased by: 10
+Tickets: 30 Increased by: 9
+Tickets: 40 Increased by: 12
+Tickets: 50 Increased by: 21
+Tickets: 60 Increased by: 19
+PID: 1 In use?: 1 Tickets: 1 Ticks: 14
+PID: 2 In use?: 1 Tickets: 1 Ticks: 13
+PID: 3 In use?: 1 Tickets: 1 Ticks: 7
+PID: 4 In use?: 1 Tickets: 10 Ticks: 190
+PID: 5 In use?: 1 Tickets: 20 Ticks: 313
+PID: 6 In use?: 1 Tickets: 30 Ticks: 460
+PID: 7 In use?: 1 Tickets: 40 Ticks: 564
+PID: 8 In use?: 1 Tickets: 50 Ticks: 664
+PID: 9 In use?: 1 Tickets: 60 Ticks: 707
+Tickets: 10 Increased by: 4
+Tickets: 20 Increased by: 8
+Tickets: 30 Increased by: 12
+Tickets: 40 Increased by: 14
+Tickets: 50 Increased by: 21
+Tickets: 60 Increased by: 19
+PID: 1 In use?: 1 Tickets: 1 Ticks: 14
+PID: 2 In use?: 1 Tickets: 1 Ticks: 13
+PID: 3 In use?: 1 Tickets: 1 Ticks: 7
+PID: 4 In use?: 1 Tickets: 10 Ticks: 194
+PID: 5 In use?: 1 Tickets: 20 Ticks: 321
+PID: 6 In use?: 1 Tickets: 30 Ticks: 471
+PID: 7 In use?: 1 Tickets: 40 Ticks: 576
+PID: 8 In use?: 1 Tickets: 50 Ticks: 679
+PID: 9 In use?: 1 Tickets: 60 Ticks: 726
+Tickets: 10 Increased by: 4
+Tickets: 20 Increased by: 8
+Tickets: 30 Increased by: 11
+Tickets: 40 Increased by: 12
+Tickets: 50 Increased by: 15
+Tickets: 60 Increased by: 19
+PID: 1 In use?: 1 Tickets: 1 Ticks: 14
+PID: 2 In use?: 1 Tickets: 1 Ticks: 13
+PID: 3 In use?: 1 Tickets: 1 Ticks: 7
+PID: 4 In use?: 1 Tickets: 10 Ticks: 198
+PID: 5 In use?: 1 Tickets: 20 Ticks: 324
+PID: 6 In use?: 1 Tickets: 30 Ticks: 477
+PID: 7 In use?: 1 Tickets: 40 Ticks: 580
+PID: 8 In use?: 1 Tickets: 50 Ticks: 687
+PID: 9 In use?: 1 Tickets: 60 Ticks: 731
+Tickets: 10 Increased by: 4
+Tickets: 20 Increased by: 3
+Tickets: 30 Increased by: 6
+Tickets: 40 Increased by: 4
+Tickets: 50 Increased by: 8
+Tickets: 60 Increased by: 5
+PID: 1 In use?: 1 Tickets: 1 Ticks: 14
+PID: 2 In use?: 1 Tickets: 1 Ticks: 13
+PID: 3 In use?: 1 Tickets: 1 Ticks: 7
+PID: 4 In use?: 1 Tickets: 10 Ticks: 202
+PID: 5 In use?: 1 Tickets: 20 Ticks: 330
+PID: 6 In use?: 1 Tickets: 30 Ticks: 484
+PID: 7 In use?: 1 Tickets: 40 Ticks: 591
+PID: 8 In use?: 1 Tickets: 50 Ticks: 696
+PID: 9 In use?: 1 Tickets: 60 Ticks: 745
+Tickets: 10 Increased by: 4
+Tickets: 20 Increased by: 6
+Tickets: 30 Increased by: 7
+Tickets: 40 Increased by: 11
+Tickets: 50 Increased by: 9
+Tickets: 60 Increased by: 14
+PID: 1 In use?: 1 Tickets: 1 Ticks: 14
+PID: 2 In use?: 1 Tickets: 1 Ticks: 13
+PID: 3 In use?: 1 Tickets: 1 Ticks: 7
+PID: 4 In use?: 1 Tickets: 10 Ticks: 206
+PID: 5 In use?: 1 Tickets: 20 Ticks: 336
+PID: 6 In use?: 1 Tickets: 30 Ticks: 496
+PID: 7 In use?: 1 Tickets: 40 Ticks: 604
+PID: 8 In use?: 1 Tickets: 50 Ticks: 711
+PID: 9 In use?: 1 Tickets: 60 Ticks: 758
+Tickets: 10 Increased by: 4
+Tickets: 20 Increased by: 6
+Tickets: 30 Increased by: 12
+Tickets: 40 Increased by: 13
+Tickets: 50 Increased by: 15
+Tickets: 60 Increased by: 13
+PID: 1 In use?: 1 Tickets: 1 Ticks: 14
+PID: 2 In use?: 1 Tickets: 1 Ticks: 13
+PID: 3 In use?: 1 Tickets: 1 Ticks: 7
+PID: 4 In use?: 1 Tickets: 10 Ticks: 210
+PID: 5 In use?: 1 Tickets: 20 Ticks: 342
+PID: 6 In use?: 1 Tickets: 30 Ticks: 505
+PID: 7 In use?: 1 Tickets: 40 Ticks: 613
+PID: 8 In use?: 1 Tickets: 50 Ticks: 722
+PID: 9 In use?: 1 Tickets: 60 Ticks: 773
+Tickets: 10 Increased by: 4
+Tickets: 20 Increased by: 6
+Tickets: 30 Increased by: 9
+Tickets: 40 Increased by: 9
+Tickets: 50 Increased by: 11
+Tickets: 60 Increased by: 15
+PID: 1 In use?: 1 Tickets: 1 Ticks: 14
+PID: 2 In use?: 1 Tickets: 1 Ticks: 13
+PID: 3 In use?: 1 Tickets: 1 Ticks: 7
+PID: 4 In use?: 1 Tickets: 10 Ticks: 214
+PID: 5 In use?: 1 Tickets: 20 Ticks: 344
+PID: 6 In use?: 1 Tickets: 30 Ticks: 512
+PID: 7 In use?: 1 Tickets: 40 Ticks: 621
+PID: 8 In use?: 1 Tickets: 50 Ticks: 733
+PID: 9 In use?: 1 Tickets: 60 Ticks: 783
+Tickets: 10 Increased by: 4
+Tickets: 20 Increased by: 2
+Tickets: 30 Increased by: 7
+Tickets: 40 Increased by: 8
+Tickets: 50 Increased by: 11
+Tickets: 60 Increased by: 10
+PID: 1 In use?: 1 Tickets: 1 Ticks: 14
+PID: 2 In use?: 1 Tickets: 1 Ticks: 13
+PID: 3 In use?: 1 Tickets: 1 Ticks: 7
+PID: 4 In use?: 1 Tickets: 10 Ticks: 218
+PID: 5 In use?: 1 Tickets: 20 Ticks: 347
+PID: 6 In use?: 1 Tickets: 30 Ticks: 518
+PID: 7 In use?: 1 Tickets: 40 Ticks: 627
+PID: 8 In use?: 1 Tickets: 50 Ticks: 741
+PID: 9 In use?: 1 Tickets: 60 Ticks: 789
+Tickets: 10 Increased by: 4
+Tickets: 20 Increased by: 3
+Tickets: 30 Increased by: 6
+Tickets: 40 Increased by: 6
+Tickets: 50 Increased by: 8
+Tickets: 60 Increased by: 6
+PID: 1 In use?: 1 Tickets: 1 Ticks: 14
+PID: 2 In use?: 1 Tickets: 1 Ticks: 13
+PID: 3 In use?: 1 Tickets: 1 Ticks: 7
+PID: 4 In use?: 1 Tickets: 10 Ticks: 222
+PID: 5 In use?: 1 Tickets: 20 Ticks: 355
+PID: 6 In use?: 1 Tickets: 30 Ticks: 525
+PID: 7 In use?: 1 Tickets: 40 Ticks: 639
+PID: 8 In use?: 1 Tickets: 50 Ticks: 754
+PID: 9 In use?: 1 Tickets: 60 Ticks: 805
+Tickets: 10 Increased by: 4
+Tickets: 20 Increased by: 8
+Tickets: 30 Increased by: 7
+Tickets: 40 Increased by: 12
+Tickets: 50 Increased by: 13
+Tickets: 60 Increased by: 16
