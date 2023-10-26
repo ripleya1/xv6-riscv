@@ -301,7 +301,6 @@ fork(void)
     return -1;
   }
   np->sz = p->sz;
-  // np->tickets = p->tickets;
 
   // copy saved user registers.
   *(np->trapframe) = *(p->trapframe);
@@ -326,7 +325,7 @@ fork(void)
   release(&wait_lock);
 
   acquire(&np->lock);
-  np->tickets = p->tickets; // TODO: should be in lock?
+  np->tickets = p->tickets;
   np->state = RUNNABLE;
   release(&np->lock);
 
@@ -574,29 +573,28 @@ scheduler(void)
   count = 0;
   winner = 0;
   total = 0;
-  rand_init(1);
-  // total = 5; // TODO: testing with this number
-  // TODO: this always results in total being 1
+  rand_init(1); // seed random
 
   for(;;){
     // Avoid deadlock by ensuring that devices can interrupt.
     intr_on();
     total = 0;
     count = 0;
+    // add all tickets
     for(p = proc; p < &proc[NPROC]; p++) {
       acquire(&p->lock);
       total += p->tickets;
       release(&p->lock);
     }
     winner = scaled_random(0, total);
-    // printf("%d\n", total);
+
+    // iterate through all procs
     for(p = proc; p < &proc[NPROC]; p++) {
       acquire(&p->lock);
       
       count = count + p->tickets;
       if(count > winner){ // winner found
         if(p->state == RUNNABLE){
-          // TODO: want to do this with uptime or does it matter?
           p->ticks = p->ticks + 1; // count ticks
           
           // Switch to chosen process.  It is the process's job
@@ -784,7 +782,6 @@ settickets(int number)
 {
   struct proc *p = myproc();
   if(number > 0){
-    // TODO: need lock?
     acquire(&p->lock);
     p->tickets = number;
     release(&p->lock);
@@ -793,8 +790,6 @@ settickets(int number)
   return -1;
 }
 
-// TODO: should this be the thing that's aggregating the data? separate function in proc
-// TODO: should probably make a user/getpinfo.c file for printing? 3 programs forked that collect stats, run counter for awhile, print (could print as you go or store in arr)
 int
 getpinfo(struct pstat* ps)
 {
@@ -804,8 +799,8 @@ getpinfo(struct pstat* ps)
 
   struct pstat pinfo; // local to kernel
   int i;
+  // set fields in pstat for all procs
   for(i = 0; i < NPROC; i++){
-    // TODO: need lock?
     acquire(&proc[i].lock);
     pinfo.inuse[i] = (proc[i].state != UNUSED);
     pinfo.tickets[i] = proc[i].tickets;
@@ -813,7 +808,7 @@ getpinfo(struct pstat* ps)
     pinfo.ticks[i] = proc[i].ticks;
     release(&proc[i].lock);
    }
- // copy to user space, returns 0 if successful, -1 if not
+  // copy to user space, returns 0 if successful, -1 if not
   return either_copyout(1, (uint64) ps, &pinfo, sizeof(struct pstat));
 }
 
