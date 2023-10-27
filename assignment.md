@@ -4,15 +4,15 @@ Our goal in this project is to explore page tables and their use.
 ## Resources
 - The xv6-riscv version of the xv6 book may be useful here, especially looking at the Page Tables chapter
 - Within the xv6-riscv kernel code, the key files will be
-- memlayout.h describing the memory layout
-- vm.c which implements (most of) the virtual memory code
-- kalloc.c which implements allocation and freeing of physical memory
+    - memlayout.h describing the memory layout
+    - vm.c which implements (most of) the virtual memory code
+    - kalloc.c which implements allocation and freeing of physical memory
 - I'll just note that MIT also suggests their students refer to the RISC-V privileged architecture manual
 ## Big Ol' Note on Rollout Of the Assignment
 My big self-learning of Project 3 was that I really need to write all the parts before assigning (which is to say, I really didn't think getting a verified test of the code working was going to be that hard :-)). I won't necessarily still know all the big stumbles, but I'll try to reduce those. As a result, I'm rolling out this assignment in some pieces, though likely completely out by the 23rd.
 
 ## Part 1: What does a page table in RISC-V look like?
-Define a function called vmprint(). It should take a pagetable_t argument, and print that pagetable in the format described below. Insert if(p->pid==1) vmprint(p->pagetable) in exec.c just before the return argc (line 132), to print the first process's page table.
+Define a function called `vmprint()`. It should take a `pagetable_t` argument, and print that pagetable in the format described below. Insert `if(p->pid==1) vmprint(p->pagetable)` in `exec.c` just before the return argc (line 132), to print the first process's page table.
 
 Your output should look something like this:
 ```
@@ -35,9 +35,9 @@ The first line displays the argument to vmprint. After that there is a line for 
 Your code might emit different physical addresses than those shown above. The number of entries and the virtual addresses should be the same.
 
 #### Part 1 details
-- place vmprint in kernel/vm.c; define the prototype for it in kernel/defs.h (which is included in exec.c)
-- Use the macros in riscv.h to get the indices in the page table (and you'll want to look at the xv6-riscv book to understand the page table scheme)
-- The big hint is that the function freewalk in vm.c "may be inspirational" (don't free the pages, but think about what free walk does...)
+- place `vmprint` in `kernel/vm.c`; define the prototype for it in `kernel/defs.h` (which is included in `exec.c`)
+- Use the macros in `riscv.h` to get the indices in the page table (and you'll want to look at the xv6-riscv book to understand the page table scheme)
+- The big hint is that the function freewalk in `vm.c` "may be inspirational" (don't free the pages, but think about what free walk does...)
 - %p is used in printf to print out the full 64-bit hex PTEs and addresses shown above
 ## Part 2: Detect which pages have been accessed
 Some garbage collectors (a form of automatic memory management) can benefit from information about which pages have been accessed (read or write). You will add a new feature to xv6 that detects and reports this information to userspace by inspecting the access bits in the RISC-V page table. The RISC-V hardware page walker marks these bits in the PTE whenever it resolves a TLB miss.

@@ -1,5 +1,7 @@
 #ifndef __ASSEMBLER__
 
+// TODO: use to get the indicces on the page table
+
 // which hart (core) is this?
 static inline uint64
 r_mhartid()

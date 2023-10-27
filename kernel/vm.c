@@ -266,6 +266,7 @@ uvmdealloc(pagetable_t pagetable, uint64 oldsz, uint64 newsz)
   return newsz;
 }
 
+// TODO: inspiration
 // Recursively free page-table pages.
 // All leaf mappings must already have been removed.
 void
@@ -436,4 +437,9 @@ copyinstr(pagetable_t pagetable, char *dst, uint64 srcva, uint64 max)
   } else {
     return -1;
   }
+}
+
+void
+vmprint(pagetable_t pagetable){
+
 }
