@@ -459,7 +459,8 @@ freewalk(pagetable_t pagetable)
 }
 */
 void
-vmprint(pagetable_t pagetable, int level){
+vmprint(pagetable_t pagetable, int level)
+{
   int i, j, k;
   if(level == 0){
     printf("page table %p\n", pagetable);
@@ -487,4 +488,10 @@ vmprint(pagetable_t pagetable, int level){
       printf("%d: pte %p pa %p\n", i, pte, PTE2PA(pte));
     }
   }
+}
+
+int
+pgaccess(int page, int numPages, int *output)
+{
+  return 0;
 }

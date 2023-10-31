@@ -89,3 +89,24 @@ sys_uptime(void)
   release(&tickslock);
   return xticks;
 }
+
+/*
+First, it takes the starting virtual address of the 
+first user page to check. (int?)
+Second, it takes the number of pages to check. (int)
+Finally, it takes a user address to a buffer to store 
+the results into a bitmask (this is a data structure 
+that uses one bit per page and where the first page 
+corresponds to the least significant bit). (int*)
+*/
+uint64
+sys_pgaccess(void)
+{
+  int page, numPages;
+  uint64 output;
+
+  argint(0, &page);
+  argint(0, &numPages);
+  argaddr(0, &output);
+  return pgaccess(page, numPages, (int *)output);
+}
