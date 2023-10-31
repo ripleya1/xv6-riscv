@@ -460,16 +460,16 @@ freewalk(pagetable_t pagetable)
 */
 void
 vmprint(pagetable_t pagetable, int level){
+  int i, j, k;
   if(level == 0){
     printf("page table %p\n", pagetable);
   }
   // there are 2^9 = 512 PTEs in a page table.
-  for(int i = 0; i < 512; i++){
+  for(i = 0; i < 512; i++){
     pte_t pte = pagetable[i];
     if((pte & PTE_V) && (pte & (PTE_R|PTE_W|PTE_X)) == 0){
-      printf(" ..");
-      int i;
-      for(i = 0; i < level; i++){
+      // print depth
+      for(j = 0; j < level + 1; j++){ // always print depth + 1
         printf(" ..");
       }
       printf("%d: pte %p pa %p\n", i, pte, PTE2PA(pte));
@@ -480,9 +480,8 @@ vmprint(pagetable_t pagetable, int level){
       vmprint((pagetable_t)child, level);
     } 
     else if(pte & PTE_V){
-      printf(" ..");
-      int i;
-      for(i = 0; i < level; i++){
+      // print depth
+      for(k = 0; k < level + 1; k++){ // always print depth + 1
         printf(" ..");
       }
       printf("%d: pte %p pa %p\n", i, pte, PTE2PA(pte));
