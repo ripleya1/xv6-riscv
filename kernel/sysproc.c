@@ -102,11 +102,11 @@ corresponds to the least significant bit). (int*)
 uint64
 sys_pgaccess(void)
 {
-  int page, numPages;
-  uint64 output;
+  uint64 page, output;
+  int numPages;
 
-  argint(0, &page);
+  argaddr(0, &page);
   argint(0, &numPages);
   argaddr(0, &output);
-  return pgaccess(page, numPages, (int *)output);
+  return pgaccess((char *)page, numPages, (int *)output);
 }

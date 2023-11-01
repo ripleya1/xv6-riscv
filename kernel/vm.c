@@ -491,7 +491,13 @@ vmprint(pagetable_t pagetable, int level)
 }
 
 int
-pgaccess(int page, int numPages, int *output)
+pgaccess(char * page, int numPages, int *output)
 {
-  return 0;
+  int BITMASKSIZE = 512;
+  if(numPages > BITMASKSIZE){
+    return -1;
+  }
+  int result;
+  // copy to user space, returns 0 if successful, -1 if not
+  return either_copyout(1, (uint64) output, &result, sizeof(int));
 }
