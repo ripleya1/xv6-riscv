@@ -490,6 +490,16 @@ vmprint(pagetable_t pagetable, int level)
   }
 }
 
+/*
+Some garbage collectors (a form of automatic memory management) 
+can benefit from information about which pages have been accessed
+(read or write). You will add a new feature to xv6 that detects 
+and reports this information to userspace by inspecting the access 
+bits in the RISC-V page table. The RISC-V hardware page walker
+marks these bits in the PTE whenever it resolves a TLB miss.
+Your job is to implement pgaccess(), 
+a system call that reports which pages have been accessed.
+*/
 int
 pgaccess(char * page, int numPages, int *output)
 {
@@ -498,6 +508,9 @@ pgaccess(char * page, int numPages, int *output)
     return -1;
   }
   int result;
+  for(int i = 0; i < numPages; i++){
+    
+  }
   // copy to user space, returns 0 if successful, -1 if not
   return either_copyout(1, (uint64) output, &result, sizeof(int));
 }
