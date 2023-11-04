@@ -499,17 +499,29 @@ bits in the RISC-V page table. The RISC-V hardware page walker
 marks these bits in the PTE whenever it resolves a TLB miss.
 Your job is to implement pgaccess(), 
 a system call that reports which pages have been accessed.
+
+First, it takes the starting virtual address of the first user 
+page to check. 
+Second, it takes the number of pages to check. 
+Finally, it takes a user address to a buffer to store the 
+results into a bitmask (this is a data structure that uses 
+one bit per page and where the first page corresponds to the 
+least significant bit).
 */
 int
-pgaccess(char * page, int numPages, int *output)
+pgaccess(char * page, int numPages, int *output, pagetable_t pt)
 {
-  int BITMASKSIZE = 512;
+  pte_t pte;
+  int BITMASKSIZE = PGSIZE * 8;
+  int result;
   if(numPages > BITMASKSIZE){
     return -1;
   }
-  int result;
+  pte = *(walk(pt, (uint64)page, 0)); // TODO: is this allowed??
+  // pte = *pteP;
   for(int i = 0; i < numPages; i++){
-    
+    result = (result & (1 << i)) | PTE_A; // set bit
+    pte = pte ^ PTE_A; // unset bit
   }
   // copy to user space, returns 0 if successful, -1 if not
   return either_copyout(1, (uint64) output, &result, sizeof(int));
