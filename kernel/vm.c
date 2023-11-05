@@ -96,7 +96,7 @@ walk(pagetable_t pagetable, uint64 va, int alloc)
       if(!alloc || (pagetable = (pde_t*)kalloc()) == 0)
         return 0;
       memset(pagetable, 0, PGSIZE);
-      *pte = PA2PTE(pagetable) | PTE_V;
+      *pte = PA2PTE(pagetable) | PTE_V | PTE_A;
     }
   }
   return &pagetable[PX(0, va)];
@@ -155,7 +155,7 @@ mappages(pagetable_t pagetable, uint64 va, uint64 size, uint64 pa, int perm)
       return -1;
     if(*pte & PTE_V)
       panic("mappages: remap");
-    *pte = PA2PTE(pa) | perm | PTE_V;
+    *pte = PA2PTE(pa) | perm | PTE_V | PTE_A;
     if(a == last)
       break;
     a += PGSIZE;
@@ -266,7 +266,6 @@ uvmdealloc(pagetable_t pagetable, uint64 oldsz, uint64 newsz)
   return newsz;
 }
 
-// TODO: inspiration
 // Recursively free page-table pages.
 // All leaf mappings must already have been removed.
 void
@@ -517,11 +516,13 @@ pgaccess(char * page, int numPages, int *output, pagetable_t pt)
   if(numPages > BITMASKSIZE){
     return -1;
   }
-  pte = *(walk(pt, (uint64)page, 0)); // TODO: is this allowed??
+  // pte = *(walk(pt, (uint64)page, 0)); // TODO: is this allowed??
   // pte = *pteP;
   for(int i = 0; i < numPages; i++){
+    pte = pt[i];
     result = (result & (1 << i)) | PTE_A; // set bit
     pte = pte ^ PTE_A; // unset bit
+    // *pte &= ~PTE_U; // TODO: use this syntax maybe
   }
   // copy to user space, returns 0 if successful, -1 if not
   return either_copyout(1, (uint64) output, &result, sizeof(int));
