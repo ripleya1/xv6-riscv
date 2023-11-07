@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
     {
         pageTester[i*PGSIZE]=1; // accessed
     }
-    if (pgaccess(pageTester,sizeof(int),&accessBitmap) < 0)
+    if (pgaccess(pageTester,sizeof(int) * 8,&accessBitmap) < 0)
     {
         printf("error in pgaccess\n");
     }

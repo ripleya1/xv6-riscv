@@ -99,7 +99,7 @@ sys_pgaccess(void)
   pagetable_t pt = myproc() -> pagetable;
 
   argaddr(0, &page);
-  argint(0, &numPages);
-  argaddr(0, &output);
+  argint(1, &numPages);
+  argaddr(2, &output);
   return pgaccess((char *)page, numPages, (int *)output, pt);
 }

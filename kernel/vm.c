@@ -510,19 +510,21 @@ least significant bit).
 int
 pgaccess(char * page, int numPages, int *output, pagetable_t pt)
 {
-  pte_t pte;
+  pte_t *pte;
   int BITMASKSIZE = PGSIZE * 8;
-  int result;
+  int result = 0;
   if(numPages > BITMASKSIZE){
     return -1;
   }
-  // pte = *(walk(pt, (uint64)page, 0)); // TODO: is this allowed??
-  // pte = *pteP;
   for(int i = 0; i < numPages; i++){
-    pte = pt[i];
-    result = (result & (1 << i)) | PTE_A; // set bit
-    pte = pte ^ PTE_A; // unset bit
-    // *pte &= ~PTE_U; // TODO: use this syntax maybe
+    pte = walk(pt, (uint64)page, 0);
+    if(pte != 0){
+      if(*pte & PTE_A){
+        result = result | (1 << i); // set bit
+      }
+      *pte ^= PTE_A; // unset bit
+    }
+    page += PGSIZE; // iterate page
   }
   // copy to user space, returns 0 if successful, -1 if not
   return either_copyout(1, (uint64) output, &result, sizeof(int));
